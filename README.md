@@ -15,7 +15,9 @@ Djairo Dantas da Silva Filho
 
 - [Notebook executado](notebooks/APS1_Airbnb_EDA.ipynb)
 - [Plano e checklist da APS1](PLANO_APS1_AIRBNB.md)
-- [Dependências](requirements.txt)
+- [Configuração do projeto](pyproject.toml)
+- [Ambiente reproduzível](uv.lock)
+- [Dependências compatíveis com `pip`](requirements.txt)
 
 ## Fonte dos dados
 
@@ -26,9 +28,28 @@ O CSV está disponível em `data/raw/AB_NYC_2019.csv`. Se o arquivo não estiver
 presente em outra execução, o notebook também pode usar `kagglehub` para obtê-lo
 da fonte indicada.
 
-## Como executar
+## Como executar com uv
 
-Crie um ambiente virtual, instale as dependências e execute o notebook:
+O ambiente principal é gerenciado pelo
+[`uv`](https://docs.astral.sh/uv/getting-started/installation/). Para instalar
+o Python 3.12, sincronizar as versões registradas no lockfile e abrir o Jupyter
+Lab:
+
+```powershell
+uv sync --locked
+uv run jupyter lab
+```
+
+Para executar o notebook completo sem abrir a interface:
+
+```powershell
+uv run jupyter nbconvert --execute --to notebook --inplace notebooks/APS1_Airbnb_EDA.ipynb
+```
+
+## Alternativa com pip
+
+O `requirements.txt` é exportado do ambiente do `uv` para facilitar a execução
+em ambientes que utilizam apenas `pip`:
 
 ```powershell
 python -m venv .venv
@@ -37,10 +58,12 @@ python -m pip install -r requirements.txt
 python -m jupyter nbconvert --execute --to notebook --inplace notebooks/APS1_Airbnb_EDA.ipynb
 ```
 
-Também é possível abrir o notebook no Jupyter Lab:
+Ao alterar dependências, atualize o lockfile e gere novamente o arquivo de
+compatibilidade:
 
 ```powershell
-python -m jupyter lab
+uv lock
+uv export --all-groups --no-emit-project --no-hashes --format requirements.txt --output-file requirements.txt
 ```
 
 ## Principais resultados
