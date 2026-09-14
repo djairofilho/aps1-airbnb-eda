@@ -527,27 +527,27 @@ baixar AB_NYC_2019.csv
 
 ## 16. Checklist para conceito A
 
-- [ ] O arquivo usado é o `AB_NYC_2019.csv` da fonte definida.
-- [ ] A capa contém nomes, título, data e referência.
-- [ ] A pergunta central fala de preço **anunciado** em 2019.
-- [ ] As 16 variáveis foram explicadas.
-- [ ] Shape, tipos, ausentes, duplicatas e inconsistências foram investigados.
-- [ ] Foi explicado que `price` é contínuo e sua distribuição foi investigada.
-- [ ] A distribuição e os extremos de `price` foram analisados.
-- [ ] A divisão treino/teste ocorreu antes do ajuste dos transformadores.
-- [ ] As estatísticas incluem todas as variáveis numéricas relevantes.
-- [ ] Os limites de gráficos foram respeitados.
-- [ ] Todos os gráficos têm título, eixos, unidades e interpretação.
-- [ ] Média e mediana não foram tratadas como equivalentes em distribuições
+- [x] O arquivo usado é o `AB_NYC_2019.csv` da fonte definida.
+- [x] A capa contém nomes, título, data e referência.
+- [x] A pergunta central fala de preço **anunciado** em 2019.
+- [x] As 16 variáveis foram explicadas.
+- [x] Shape, tipos, ausentes, duplicatas e inconsistências foram investigados.
+- [x] Foi explicado que `price` é contínuo e sua distribuição foi investigada.
+- [x] A distribuição e os extremos de `price` foram analisados.
+- [x] A divisão treino/teste ocorreu antes do ajuste dos transformadores.
+- [x] As estatísticas incluem todas as variáveis numéricas relevantes.
+- [x] Os limites de gráficos foram respeitados.
+- [x] Todos os gráficos têm título, eixos, unidades e interpretação.
+- [x] Média e mediana não foram tratadas como equivalentes em distribuições
       assimétricas.
-- [ ] Ausências em avaliações foram interpretadas pelo contexto.
-- [ ] IDs não foram tratados como grandezas numéricas no modelo.
-- [ ] Remoções e transformações foram justificadas com evidências.
-- [ ] O PCA foi ajustado em numéricas imputadas e padronizadas.
-- [ ] O pipeline funciona no teste sem novo `fit`.
-- [ ] O texto não confunde associação com causalidade.
-- [ ] As limitações temporais e de representatividade foram discutidas.
-- [ ] O notebook executa do início ao fim sem erros.
+- [x] Ausências em avaliações foram interpretadas pelo contexto.
+- [x] IDs não foram tratados como grandezas numéricas no modelo.
+- [x] Remoções e transformações foram justificadas com evidências.
+- [x] O PCA foi ajustado em numéricas imputadas e padronizadas.
+- [x] O pipeline funciona no teste sem novo `fit`.
+- [x] O texto não confunde associação com causalidade.
+- [x] As limitações temporais e de representatividade foram discutidas.
+- [x] O notebook executa do início ao fim sem erros.
 
 ## 17. Referências
 
