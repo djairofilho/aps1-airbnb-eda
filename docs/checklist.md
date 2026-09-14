@@ -2,7 +2,7 @@
 
 | Requisito | Evidência |
 |---|---|
-| Dataset correto | `AB_NYC_2019.csv` e referência do Kaggle |
+| Dataset correto | Arquivo, referência do Kaggle e SHA-256 verificado |
 | Identificação, título e data | Capa do notebook e página inicial |
 | Pergunta sobre preço anunciado | Objetivo e pergunta central |
 | Explicação das 16 variáveis | Dicionário de dados |
@@ -12,6 +12,7 @@
 | Distribuição e extremos do `target` | Histogramas, quantis e tabelas |
 | Split antes dos transformadores | Fluxo documentado e código |
 | Estatísticas numéricas | Média, mediana, desvio e zeros |
+| Sensibilidade das correlações | Pearson, Spearman e `log1p(price)` comparados |
 | Limites de gráficos | Três grupos por relação, com subplots relacionados |
 | Títulos, eixos e interpretações | Figuras e textos associados |
 | Média versus mediana | Diferença discutida para target assimétrico |

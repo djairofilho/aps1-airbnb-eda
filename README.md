@@ -8,8 +8,9 @@ Análise exploratória do conjunto **New York City Airbnb Open Data**, realizada
 para a disciplina de Machine Learning do Insper.
 
 O projeto investiga como localização, tipo de acomodação, disponibilidade e
-atividade de avaliações se relacionam com o preço anunciado de uma diária em
-Nova York em 2019. Esta é a primeira etapa de um projeto de regressão.
+atividade de avaliações se relacionam com o preço anunciado de uma diária no
+snapshot de Nova York em 2019. Esta é a primeira etapa de um projeto de
+regressão.
 
 ## Autor
 
@@ -31,6 +32,12 @@ O notebook utiliza o arquivo `AB_NYC_2019.csv` do dataset
 O CSV está disponível em `data/raw/AB_NYC_2019.csv`. Se o arquivo não estiver
 presente em outra execução, o notebook também pode usar `kagglehub` para obtê-lo
 da fonte indicada.
+
+SHA-256 da versão analisada:
+
+```text
+e420db40ff10fcb40efc1b5b1648ee0b18a48f4e4537155cecc59fe95d18783a
+```
 
 ## Como executar com uv
 
@@ -87,6 +94,7 @@ uv export --all-groups `
 
 ## Limitações
 
-Os dados representam anúncios de 2019, não reservas concluídas. Portanto, preço
+Os dados formam um snapshot de anúncios disponíveis em 2019, não uma série
+histórica de preços nem um registro de reservas concluídas. Portanto, preço
 anunciado não equivale a preço pago, ocupação, demanda ou receita. As associações
 encontradas não demonstram causalidade nem descrevem o mercado atual.

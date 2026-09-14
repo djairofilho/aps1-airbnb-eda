@@ -2,12 +2,13 @@
 
 ## O que os dados permitem afirmar
 
-Os resultados descrevem associações entre características dos anúncios e seus
-preços anunciados em Nova York em 2019.
+Os resultados descrevem associações entre características e preços anunciados
+no snapshot de Nova York em 2019.
 
 ## O que os dados não permitem afirmar
 
 - preço efetivamente pago;
+- evolução dos preços ao longo de 2019;
 - ocupação, receita ou demanda real;
 - efeito causal de região ou tipo de acomodação;
 - comportamento do mercado atual;
@@ -19,6 +20,7 @@ preços anunciados em Nova York em 2019.
 - cauda longa do target;
 - alta cardinalidade de bairro;
 - extremos potencialmente influentes;
+- sensibilidade de Pearson, `StandardScaler` e PCA aos extremos;
 - variáveis omitidas;
 - concentração geográfica;
 - possível diferença de erro entre grupos.

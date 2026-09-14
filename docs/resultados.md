@@ -26,9 +26,22 @@ uso de one-hot encoding capaz de lidar com categorias ainda não observadas.
 
 ![Matriz de correlação](assets/images/matriz-correlacao.png)
 
-As correlações lineares com `price` são fracas; a maior em módulo é a de
-longitude, próxima de -0,15. Isso não elimina relações não lineares ou
-interações.
+Com Pearson e `price` na escala original, as correlações lineares são fracas. A
+comparação com Spearman e com `log1p(price)` mostra que o resultado depende da
+medida e da escala:
+
+| Variável | Pearson: `price` | Spearman: `price` | Pearson: `log1p(price)` |
+|---|---:|---:|---:|
+| `longitude` | -0,149 | -0,441 | -0,330 |
+| `latitude` | 0,035 | 0,137 | 0,081 |
+| `calculated_host_listings_count` | 0,055 | -0,108 | 0,131 |
+| `minimum_nights` | 0,038 | 0,100 | 0,030 |
+| `availability_365` | 0,078 | 0,084 | 0,097 |
+| `reviews_per_month` | -0,050 | -0,058 | -0,061 |
+| `number_of_reviews` | -0,047 | -0,051 | -0,042 |
+
+A associação monotônica moderada da longitude provavelmente resume diferenças
+espaciais entre regiões. Ela não prova causalidade nem importância preditiva.
 
 ![Preço relacionado ao mínimo de noites e à disponibilidade](assets/images/relacoes-numericas.png)
 

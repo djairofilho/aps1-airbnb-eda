@@ -19,7 +19,7 @@ Nenhum método `fit` recebe `X_test`.
 | Grupo | Estratégia | Justificativa |
 |---|---|---|
 | Numéricas | Imputação pela mediana | Menor sensibilidade à assimetria |
-| Numéricas | StandardScaler | Coloca escalas diferentes em base comparável |
+| Numéricas | `StandardScaler` | Escalas comparáveis; sensível a extremos |
 | Categóricas | Imputação pela moda | Evita perda de registros |
 | Categóricas | One-hot encoding | Não cria ordem artificial |
 | Categoria nova | `handle_unknown="ignore"` | Aceita valores novos |

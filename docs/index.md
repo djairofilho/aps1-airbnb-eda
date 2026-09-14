@@ -7,13 +7,14 @@
 | Data de entrega | 14/09/2026 |
 
 Este projeto investiga como localização, tipo de acomodação, disponibilidade e
-atividade de avaliações se relacionam com o **preço anunciado** de uma diária do
-Airbnb em Nova York em 2019.
+atividade de avaliações se relacionam com o **preço anunciado** de uma diária no
+snapshot do Airbnb em Nova York em 2019.
 
 ## Escopo
 
-Cada linha representa um anúncio, não uma reserva concluída. Os resultados
-descrevem preços anunciados e não receita, ocupação ou demanda efetiva.
+Cada linha representa um anúncio, não uma reserva concluída. O arquivo é um
+snapshot, não uma série histórica de preços. Os resultados descrevem preços
+anunciados e não receita, ocupação ou demanda efetiva.
 
 ## Principais resultados
 

@@ -4,7 +4,7 @@
 
 ### Dataset
 
-**New York City Airbnb Open Data**, publicado no Kaggle, com informações sobre
+**New York City Airbnb Open Data**, publicado no Kaggle, com um snapshot de
 anúncios do Airbnb em Nova York em 2019.
 
 Arquivo esperado: `AB_NYC_2019.csv`.
@@ -60,9 +60,9 @@ Validar os nomes e tipos depois do carregamento do CSV.
 | `minimum_nights` | Discreta | Mínimo de noites | Investigar extremos |
 | `number_of_reviews` | Discreta | Total de avaliações | Manter |
 | `last_review` | Data | Última avaliação | Transformar ou excluir |
-| `reviews_per_month` | Numérica | Avaliações por mês | Imputar com contexto |
-| `calculated_host_listings_count` | Discreta | Escala do host | Manter |
-| `availability_365` | Discreta | Dias disponíveis | Manter |
+| `reviews_per_month` | Numérica | Média histórica | Imputar com contexto |
+| `calculated_host_listings_count` | Discreta | Anúncios na região | Manter |
+| `availability_365` | Discreta | Dias disponíveis | Não é ocupação |
 
 ## 4. Estrutura recomendada do notebook
 
@@ -314,7 +314,7 @@ redundância.
 
 | Grupo | Estratégia inicial | Justificativa |
 |---|---|---|
-| Numéricas | Mediana + `StandardScaler` | Robusto e adequado ao PCA |
+| Numéricas | Mediana + `StandardScaler` | Escalas comparáveis para PCA |
 | Avaliações/mês | Zero sem reviews | Ausência pode ser estrutural |
 | Categóricas | Moda ou `Missing` | Evita perda de linhas |
 | Nominais | `OneHotEncoder` | Não introduz ordem artificial |
@@ -359,6 +359,9 @@ Excluir `id`, `host_id` e `price` do ajuste do PCA.
 5. Inspecionar os loadings.
 6. Fazer PC1 versus PC2 com cor por `room_type` ou `neighbourhood_group`.
 7. Como complemento, usar `price` ou suas faixas apenas como recurso visual.
+
+Registrar que `StandardScaler` e PCA continuam sensíveis a extremos, mesmo após
+a padronização.
 
 Conclusões válidas incluem a ausência de grupos claros. PCA procura direções de
 maior variância e não maximiza a capacidade de prever `price`.
