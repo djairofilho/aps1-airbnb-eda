@@ -717,9 +717,65 @@ interpretada como ocupação observada.</p>
 uso de one-hot encoding capaz de lidar com categorias ainda não observadas.</p>
 <h2 id="relacoes-numericas">Relações numéricas</h2>
 <p><img alt="Matriz de correlação" src="../assets/images/matriz-correlacao.png" /></p>
-<p>As correlações lineares com <code>price</code> são fracas; a maior em módulo é a de
-longitude, próxima de -0,15. Isso não elimina relações não lineares ou
-interações.</p>
+<p>Com Pearson e <code>price</code> na escala original, as correlações lineares são fracas. A
+comparação com Spearman e com <code>log1p(price)</code> mostra que o resultado depende da
+medida e da escala:</p>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th style="text-align: right;">Pearson: <code>price</code></th>
+<th style="text-align: right;">Spearman: <code>price</code></th>
+<th style="text-align: right;">Pearson: <code>log1p(price)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>longitude</code></td>
+<td style="text-align: right;">-0,149</td>
+<td style="text-align: right;">-0,441</td>
+<td style="text-align: right;">-0,330</td>
+</tr>
+<tr>
+<td><code>latitude</code></td>
+<td style="text-align: right;">0,035</td>
+<td style="text-align: right;">0,137</td>
+<td style="text-align: right;">0,081</td>
+</tr>
+<tr>
+<td><code>calculated_host_listings_count</code></td>
+<td style="text-align: right;">0,055</td>
+<td style="text-align: right;">-0,108</td>
+<td style="text-align: right;">0,131</td>
+</tr>
+<tr>
+<td><code>minimum_nights</code></td>
+<td style="text-align: right;">0,038</td>
+<td style="text-align: right;">0,100</td>
+<td style="text-align: right;">0,030</td>
+</tr>
+<tr>
+<td><code>availability_365</code></td>
+<td style="text-align: right;">0,078</td>
+<td style="text-align: right;">0,084</td>
+<td style="text-align: right;">0,097</td>
+</tr>
+<tr>
+<td><code>reviews_per_month</code></td>
+<td style="text-align: right;">-0,050</td>
+<td style="text-align: right;">-0,058</td>
+<td style="text-align: right;">-0,061</td>
+</tr>
+<tr>
+<td><code>number_of_reviews</code></td>
+<td style="text-align: right;">-0,047</td>
+<td style="text-align: right;">-0,051</td>
+<td style="text-align: right;">-0,042</td>
+</tr>
+</tbody>
+</table>
+<p>A associação monotônica moderada da longitude provavelmente resume diferenças
+espaciais entre regiões. Ela não prova causalidade nem importância preditiva.</p>
 <p><img alt="Preço relacionado ao mínimo de noites e à disponibilidade" src="../assets/images/relacoes-numericas.png" /></p>
 <p>Os dispersogramas mostram sobreposição e ausência de uma tendência linear
 simples. A amostra de pontos serve somente à visualização; o pipeline utiliza

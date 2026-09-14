@@ -680,11 +680,12 @@
 
 <h1 id="limitacoes">Limitações</h1>
 <h2 id="o-que-os-dados-permitem-afirmar">O que os dados permitem afirmar</h2>
-<p>Os resultados descrevem associações entre características dos anúncios e seus
-preços anunciados em Nova York em 2019.</p>
+<p>Os resultados descrevem associações entre características e preços anunciados
+no snapshot de Nova York em 2019.</p>
 <h2 id="o-que-os-dados-nao-permitem-afirmar">O que os dados não permitem afirmar</h2>
 <ul>
 <li>preço efetivamente pago;</li>
+<li>evolução dos preços ao longo de 2019;</li>
 <li>ocupação, receita ou demanda real;</li>
 <li>efeito causal de região ou tipo de acomodação;</li>
 <li>comportamento do mercado atual;</li>
@@ -696,6 +697,7 @@ preços anunciados em Nova York em 2019.</p>
 <li>cauda longa do target;</li>
 <li>alta cardinalidade de bairro;</li>
 <li>extremos potencialmente influentes;</li>
+<li>sensibilidade de Pearson, <code>StandardScaler</code> e PCA aos extremos;</li>
 <li>variáveis omitidas;</li>
 <li>concentração geográfica;</li>
 <li>possível diferença de erro entre grupos.</li>

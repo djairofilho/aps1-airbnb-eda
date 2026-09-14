@@ -617,6 +617,10 @@
 variação e PC2 preserva a maior parte restante, sendo perpendicular a PC1.</p>
 <p>Antes do ajuste, as variáveis numéricas são imputadas pela mediana e
 padronizadas somente com o treino.</p>
+<p>Mesmo após a padronização, <code>StandardScaler</code> e PCA são sensíveis a observações
+extremas. Os componentes e a amplitude dos eixos devem ser interpretados com
+essa limitação. A ressalva segue a documentação do
+<a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html"><code>StandardScaler</code></a> e do <a href="https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html">PCA</a> no scikit-learn.</p>
 <p><img alt="PCA colorido por tipo de acomodação" src="../assets/images/pca-room-type.png" /></p>
 <h2 id="interpretacao">Interpretação</h2>
 <table>
@@ -648,8 +652,8 @@ padronizadas somente com o treino.</p>
 <p>Os tipos de acomodação se sobrepõem nos dois componentes, sem separação clara.
 Isso não torna room_type inútil: PCA maximiza variância das features e não a
 capacidade de prever preço.</p>
-<p>O PCA é usado como ferramenta exploratória, não como prova de desempenho ou
-causalidade.</p>
+<p>O PCA é usado como ferramenta exploratória, não como prova de desempenho,
+robustez ou causalidade.</p>
 
 
 

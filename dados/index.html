@@ -661,6 +661,10 @@
 <p>Foi utilizado o arquivo <strong>AB_NYC_2019.csv</strong> do dataset
 <a href="https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data">New York City Airbnb Open Data</a>.
 A base contém <strong>48.895 anúncios e 16 variáveis</strong>.</p>
+<p>O arquivo representa um snapshot da plataforma em 2019, não uma série temporal
+de preços. A versão analisada é identificada pelo SHA-256:</p>
+<div class="highlight"><pre><span></span><code>e420db40ff10fcb40efc1b5b1648ee0b18a48f4e4537155cecc59fe95d18783a
+</code></pre></div>
 <h2 id="pergunta-central">Pergunta central</h2>
 <blockquote>
 <p>Como localização, tipo de acomodação, disponibilidade e atividade de
@@ -746,22 +750,27 @@ regressão?</p>
 <tr>
 <td><code>reviews_per_month</code></td>
 <td>Numérica</td>
-<td>Média de avaliações por mês</td>
+<td>Média mensal na vida do anúncio</td>
 </tr>
 <tr>
 <td><code>calculated_host_listings_count</code></td>
-<td>Numérica discreta</td>
-<td>Anúncios do anfitrião</td>
+<td>Discreta</td>
+<td>Anúncios do host na região</td>
 </tr>
 <tr>
 <td><code>availability_365</code></td>
-<td>Numérica discreta</td>
-<td>Dias disponíveis em 365 dias</td>
+<td>Discreta</td>
+<td>Dias disponíveis no calendário futuro</td>
 </tr>
 </tbody>
 </table>
 <p>IDs são números no arquivo, mas não representam grandezas. Por isso, não entram
 como variáveis quantitativas na análise ou no modelo.</p>
+<p><code>availability_365</code> não distingue uma data reservada de uma data bloqueada pelo
+anfitrião e, por isso, não mede ocupação. <code>reviews_per_month</code> também não significa
+avaliações apenas no último mês: é uma média calculada durante a vida do anúncio.
+Essas definições seguem o <a href="https://docs.google.com/spreadsheets/d/1iWCNJcSutYqpULSQHlNyGInUvHg2BoUGoNRIGa6Szc4/edit?usp=sharing">dicionário</a> e as
+<a href="https://insideairbnb.com/data-assumptions/">premissas metodológicas</a> do Inside Airbnb.</p>
 
 
 
