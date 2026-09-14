@@ -9,12 +9,12 @@
 | last_review | 10.052 | Ausência estrutural sem avaliações |
 | reviews_per_month | 10.052 | Ausência estrutural sem avaliações |
 
-Todas as ausências de last_review e reviews_per_month coincidem com anúncios sem
-avaliações. Não há casos ausentes dessas colunas quando number_of_reviews é
-maior que zero.
+Todas as ausências de `last_review` e `reviews_per_month` coincidem com anúncios
+sem avaliações. Não há casos ausentes dessas colunas quando
+`number_of_reviews` é maior que zero.
 
-**Decisão:** preencher reviews_per_month com zero apenas para anúncios sem
-avaliações e criar has_reviews. A data bruta fica fora do baseline.
+**Decisão:** preencher `reviews_per_month` com zero apenas para anúncios sem
+avaliações e criar `has_reviews`. A data bruta fica fora do baseline.
 
 ## Outliers investigados
 
@@ -25,14 +25,14 @@ limite. Os maiores preços chegam a US$ 9.999–10.000. O maior mínimo de noite
 | Situação | Leitura | Decisão |
 |---|---|---|
 | 11 preços não positivos | Violam a definição do target | Remover |
-| Preços de até US$ 10.000 | Extremos plausíveis ou configuração incomum | Manter e testar transformação |
-| Mínimos de até 1.250 noites | Podem representar contratos longos | Manter e monitorar |
+| Preços de até US$ 10.000 | Extremos plausíveis | Manter e testar |
+| Mínimos de até 1.250 noites | Possíveis contratos longos | Monitorar |
 | Anfitriões com 327 anúncios | Compatível com operador profissional | Manter |
 
-> **Importante**
->
-> Valores extremos não foram removidos apenas por distância estatística. A
-> decisão distingue valores inválidos de observações incomuns mas plausíveis.
+### Critério de tratamento
+
+Valores extremos não foram removidos apenas por distância estatística. A
+decisão distingue valores inválidos de observações incomuns mas plausíveis.
 
 ## Vieses e representatividade
 

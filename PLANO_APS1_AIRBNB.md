@@ -38,9 +38,9 @@ Para o Airbnb, a adaptação correta é:
 
 | Texto da rubrica | Aplicação no Airbnb |
 |---|---|
-| Desbalanceamento de classes | Não se aplica, pois `price` é contínuo. Analisar assimetria, concentração e valores extremos do target. |
-| Categóricas versus `income` | Analisar como a distribuição de `price` muda entre categorias. |
-| Separabilidade das classes no PCA | Avaliar agrupamentos por `room_type`, `neighbourhood_group` e faixas de preço. |
+| Classes | Não se aplica a `price`; analisar assimetria e extremos. |
+| Categóricas e target | Comparar `price` entre categorias. |
+| PCA | Avaliar agrupamentos por tipo, região e faixa de preço. |
 
 O notebook deve dizer isso explicitamente. Assim, fica claro que o requisito foi
 interpretado para o problema de regressão, e não esquecido.
@@ -51,22 +51,22 @@ Validar os nomes e tipos depois do carregamento do CSV.
 
 | Variável | Tipo esperado | Significado | Uso futuro |
 |---|---|---|---|
-| `id` | identificador numérico | identificador único do anúncio | remover da modelagem |
-| `name` | texto | título do anúncio | excluir no baseline ou criar features de texto simples |
-| `host_id` | identificador numérico | identificador do anfitrião | não tratar como variável contínua |
-| `host_name` | texto | nome do anfitrião | remover da modelagem |
-| `neighbourhood_group` | categórica | borough/região ampla de Nova York | manter |
-| `neighbourhood` | categórica | bairro do anúncio | manter com cuidado por causa da cardinalidade |
-| `latitude` | numérica geográfica | latitude do anúncio | manter |
-| `longitude` | numérica geográfica | longitude do anúncio | manter |
-| `room_type` | categórica | tipo de acomodação | manter |
-| `price` | numérica | preço anunciado por noite | target |
-| `minimum_nights` | numérica discreta | mínimo de noites exigido | manter após investigar extremos |
-| `number_of_reviews` | numérica discreta | total de avaliações | manter |
-| `last_review` | data | data da avaliação mais recente | transformar ou excluir |
-| `reviews_per_month` | numérica | média de avaliações por mês | imputar com base no significado da ausência |
-| `calculated_host_listings_count` | numérica discreta | quantidade de anúncios do anfitrião | manter |
-| `availability_365` | numérica discreta | dias disponíveis nos próximos 365 dias | manter |
+| `id` | ID | Anúncio | Remover |
+| `name` | Texto | Título | Excluir ou derivar texto |
+| `host_id` | ID | Anfitrião | Não tratar como contínua |
+| `host_name` | Texto | Nome do anfitrião | Remover |
+| `neighbourhood_group` | Categórica | Borough | Manter |
+| `neighbourhood` | Categórica | Bairro | Controlar cardinalidade |
+| `latitude` | Geográfica | Latitude | Manter |
+| `longitude` | Geográfica | Longitude | Manter |
+| `room_type` | Categórica | Tipo de acomodação | Manter |
+| `price` | Numérica | Preço anunciado | Target |
+| `minimum_nights` | Discreta | Mínimo de noites | Investigar extremos |
+| `number_of_reviews` | Discreta | Total de avaliações | Manter |
+| `last_review` | Data | Última avaliação | Transformar ou excluir |
+| `reviews_per_month` | Numérica | Avaliações por mês | Imputar com contexto |
+| `calculated_host_listings_count` | Discreta | Escala do host | Manter |
+| `availability_365` | Discreta | Dias disponíveis | Manter |
 
 ## 4. Estrutura recomendada do notebook
 
@@ -318,13 +318,20 @@ redundância.
 
 | Grupo | Estratégia inicial | Justificativa |
 |---|---|---|
-| Numéricas comuns | imputação pela mediana e `StandardScaler` | robustez maior que a média e compatibilidade com PCA |
-| `reviews_per_month` | zero quando `number_of_reviews == 0`; investigar os demais ausentes | ausência pode ter significado estrutural |
-| Categóricas | imputação pela moda ou categoria `Missing` | evita perda de linhas |
-| Categóricas nominais | `OneHotEncoder(handle_unknown="ignore")` | não introduz ordem artificial |
-| `neighbourhood` | one-hot com agrupamento de categorias raras, se necessário | controla cardinalidade sem usar label encoding ordinal |
-| Texto e IDs | remover do baseline | alta cardinalidade e ausência de significado numérico direto |
-| Features assimétricas | avaliar `log1p` | reduz o efeito da cauda sem apagar observações válidas |
+| Numéricas | Mediana + `StandardScaler` | Robusto e adequado ao PCA |
+| Avaliações/mês | Zero sem reviews | Ausência pode ser estrutural |
+| Categóricas | Moda ou `Missing` | Evita perda de linhas |
+| Nominais | `OneHotEncoder` | Não introduz ordem artificial |
+| `neighbourhood` | Agrupar raras, se preciso | Controla cardinalidade |
+| Texto e IDs | Remover do baseline | Sem sentido numérico direto |
+| Assimétricas | Avaliar `log1p` | Reduz o efeito da cauda |
+
+A implementação deve manter três cuidados adicionais:
+
+- preencher `reviews_per_month` com zero somente quando
+  `number_of_reviews == 0`;
+- usar `OneHotEncoder(handle_unknown="ignore")` nas categóricas nominais;
+- agrupar categorias raras de `neighbourhood` apenas se a EDA justificar.
 
 A escolha final entre moda e categoria `Missing` deve nascer da auditoria de
 ausentes. Não apresentar essa tabela como decisão comprovada antes de executar a

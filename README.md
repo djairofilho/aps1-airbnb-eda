@@ -67,7 +67,11 @@ compatibilidade:
 
 ```powershell
 uv lock
-uv export --all-groups --no-emit-project --no-hashes --format requirements.txt --output-file requirements.txt
+uv export --all-groups `
+  --no-emit-project `
+  --no-hashes `
+  --format requirements.txt `
+  --output-file requirements.txt
 ```
 
 ## Principais resultados

@@ -6,11 +6,13 @@ A limpeza anterior ao split contém apenas operações determinísticas: remoç�
 duplicatas completas, remoção de targets inválidos e registro da ausência
 estrutural de avaliações.
 
-    dados após limpeza determinística
-        ├── treino (80%) → aprende mediana, escala e categorias
-        └── teste  (20%) → recebe as transformações aprendidas
+```text
+dados após limpeza determinística
+    ├── treino (80%) → aprende mediana, escala e categorias
+    └── teste  (20%) → recebe as transformações aprendidas
+```
 
-Nenhum método fit recebe X_test.
+Nenhum método `fit` recebe `X_test`.
 
 ## Estratégias adotadas
 
@@ -20,10 +22,10 @@ Nenhum método fit recebe X_test.
 | Numéricas | StandardScaler | Coloca escalas diferentes em base comparável |
 | Categóricas | Imputação pela moda | Evita perda de registros |
 | Categóricas | One-hot encoding | Não cria ordem artificial |
-| Categoria desconhecida | handle_unknown igual a ignore | Permite transformar novos valores |
-| IDs e nomes | Exclusão do baseline | Alta cardinalidade ou ausência de sentido quantitativo |
+| Categoria nova | `handle_unknown="ignore"` | Aceita valores novos |
+| IDs e nomes | Exclusão | Sem sentido quantitativo ou alta cardinalidade |
 | Target extremo | Manutenção | Não há evidência suficiente de erro |
-| Target assimétrico | Avaliar log1p na APS2 | Reduz a influência da cauda |
+| Target assimétrico | Avaliar `log1p` | Reduz a influência da cauda |
 
 ## Features do baseline
 

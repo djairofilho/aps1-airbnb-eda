@@ -26,7 +26,7 @@ uso de one-hot encoding capaz de lidar com categorias ainda não observadas.
 
 ![Matriz de correlação](assets/images/matriz-correlacao.png)
 
-As correlações lineares com price são fracas; a maior em módulo é a de
+As correlações lineares com `price` são fracas; a maior em módulo é a de
 longitude, próxima de -0,15. Isso não elimina relações não lineares ou
 interações.
 

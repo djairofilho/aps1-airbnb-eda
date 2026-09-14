@@ -1,17 +1,19 @@
 # EDA dos anúncios do Airbnb em Nova York
 
-**APS1 de Machine Learning — Insper**<br>
-**Autor:** Djairo Dantas da Silva Filho<br>
-**Data de entrega:** 14/09/2026
+| Informação | Detalhe |
+|---|---|
+| Projeto | APS1 de Machine Learning — Insper |
+| Autor | Djairo Dantas da Silva Filho |
+| Data de entrega | 14/09/2026 |
 
 Este projeto investiga como localização, tipo de acomodação, disponibilidade e
 atividade de avaliações se relacionam com o **preço anunciado** de uma diária do
 Airbnb em Nova York em 2019.
 
-> **Escopo**
->
-> Cada linha representa um anúncio, não uma reserva concluída. Os resultados
-> descrevem preços anunciados e não receita, ocupação ou demanda efetiva.
+## Escopo
+
+Cada linha representa um anúncio, não uma reserva concluída. Os resultados
+descrevem preços anunciados e não receita, ocupação ou demanda efetiva.
 
 ## Principais resultados
 
@@ -28,13 +30,15 @@ Airbnb em Nova York em 2019.
 
 ## Caminho da análise
 
-    dados brutos
-        → auditoria de qualidade
-        → limpeza determinística
-        → separação treino e teste
-        → EDA apenas no treino
-        → pipeline e PCA
-        → preparação para APS2
+```text
+dados brutos
+    → auditoria de qualidade
+    → limpeza determinística
+    → separação treino e teste
+    → EDA apenas no treino
+    → pipeline e PCA
+    → preparação para APS2
+```
 
 ## Conclusão executiva
 
@@ -48,5 +52,5 @@ Manhattan e Brooklyn concentram 85,5% do treino, o conjunto cobre apenas
 anúncios presentes na plataforma e faltam características relevantes dos
 imóveis.
 
-[Consultar os resultados completos](resultados.md){ .md-button .md-button--primary }
+[Consultar os resultados](resultados.md){ .md-button .md-button--primary }
 [Executar o projeto](reproducao.md){ .md-button }
