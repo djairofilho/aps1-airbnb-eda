@@ -27,23 +27,19 @@ Essa formulação é cuidadosa: o dataset contém anúncios, não reservas efeti
 realizadas. Portanto, o projeto analisa **preços anunciados**, e não receita,
 ocupação real ou demanda comprovada.
 
-## 2. Como adaptar a rubrica para regressão
+## 2. Aplicação da rubrica ao projeto de regressão
 
-O enunciado parece ter trechos reaproveitados de uma atividade de classificação:
+Neste projeto, `price` é um target numérico contínuo. Portanto, os requisitos
+gerais da rubrica são aplicados com diagnósticos adequados à regressão:
 
-- pede verificação de desbalanceamento de classes;
-- menciona relações com o target `income`.
-
-Para o Airbnb, a adaptação correta é:
-
-| Texto da rubrica | Aplicação no Airbnb |
+| Requisito | Aplicação no Airbnb |
 |---|---|
-| Classes | Não se aplica a `price`; analisar assimetria e extremos. |
-| Categóricas e target | Comparar `price` entre categorias. |
-| PCA | Avaliar agrupamentos por tipo, região e faixa de preço. |
+| Distribuição do target | Analisar assimetria, concentração e extremos. |
+| Categóricas e target | Comparar a distribuição de `price` entre grupos. |
+| PCA | Avaliar a estrutura numérica e padrões entre grupos. |
 
-O notebook deve dizer isso explicitamente. Assim, fica claro que o requisito foi
-interpretado para o problema de regressão, e não esquecido.
+O target permanece contínuo durante toda a análise e na modelagem prevista para
+a APS2.
 
 ## 3. Dicionário das variáveis
 
@@ -362,8 +358,7 @@ Excluir `id`, `host_id` e `price` do ajuste do PCA.
 4. Mostrar a variância explicada por PC1 e PC2.
 5. Inspecionar os loadings.
 6. Fazer PC1 versus PC2 com cor por `room_type` ou `neighbourhood_group`.
-7. Como complemento, usar faixas de preço apenas para colorir os pontos, sem
-   transformar regressão em classificação.
+7. Como complemento, usar `price` ou suas faixas apenas como recurso visual.
 
 Conclusões válidas incluem a ausência de grupos claros. PCA procura direções de
 maior variância e não maximiza a capacidade de prever `price`.
@@ -486,7 +481,7 @@ baixar AB_NYC_2019.csv
 - fazer estatísticas numéricas;
 - produzir as visualizações selecionadas;
 - escrever conclusões logo abaixo de cada figura;
-- documentar como a rubrica foi adaptada para regressão.
+- documentar como cada requisito foi aplicado à regressão.
 
 ### 13/09 — pipeline e PCA
 
@@ -534,7 +529,7 @@ baixar AB_NYC_2019.csv
 - [ ] A pergunta central fala de preço **anunciado** em 2019.
 - [ ] As 16 variáveis foram explicadas.
 - [ ] Shape, tipos, ausentes, duplicatas e inconsistências foram investigados.
-- [ ] Foi explicado por que desbalanceamento de classes não se aplica.
+- [ ] Foi explicado que `price` é contínuo e sua distribuição foi investigada.
 - [ ] A distribuição e os extremos de `price` foram analisados.
 - [ ] A divisão treino/teste ocorreu antes do ajuste dos transformadores.
 - [ ] As estatísticas incluem todas as variáveis numéricas relevantes.

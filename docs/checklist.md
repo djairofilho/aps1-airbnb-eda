@@ -8,7 +8,7 @@
 | Explicação das 16 variáveis | Dicionário de dados |
 | Shape, tipos e ausências | Auditoria de qualidade |
 | Inconsistências e duplicatas | Checks explícitos no notebook |
-| Desbalanceamento | Adaptação justificada para regressão |
+| Natureza do target | `price` contínuo; distribuição e extremos analisados |
 | Distribuição e extremos do `target` | Histogramas, quantis e tabelas |
 | Split antes dos transformadores | Fluxo documentado e código |
 | Estatísticas numéricas | Média, mediana, desvio e zeros |
