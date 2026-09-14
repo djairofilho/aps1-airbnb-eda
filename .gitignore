@@ -1,0 +1,6 @@
+.ipynb_checkpoints/
+__pycache__/
+.venv/
+data/raw/.complete/
+data/raw/*.zip
+site/
