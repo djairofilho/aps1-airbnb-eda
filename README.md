@@ -1,5 +1,9 @@
 # APS1 — EDA dos anúncios do Airbnb em Nova York
 
+[Documentação pública](https://djairofilho.github.io/aps1-airbnb-eda/) ·
+[Notebook](notebooks/APS1_Airbnb_EDA.ipynb) ·
+[Dataset](data/raw/AB_NYC_2019.csv)
+
 Análise exploratória do conjunto **New York City Airbnb Open Data**, realizada
 para a disciplina de Machine Learning do Insper.
 

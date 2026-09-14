@@ -1,0 +1,42 @@
+site_name: APS1 — EDA Airbnb NYC
+site_description: Análise exploratória dos anúncios do Airbnb em Nova York em 2019
+site_author: Djairo Dantas da Silva Filho
+site_url: https://djairofilho.github.io/aps1-airbnb-eda/
+repo_url: https://github.com/djairofilho/aps1-airbnb-eda
+repo_name: djairofilho/aps1-airbnb-eda
+
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    primary: indigo
+    accent: teal
+  features:
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - content.code.copy
+
+nav:
+  - Visão geral: index.md
+  - Dados: dados.md
+  - Qualidade, extremos e vieses: qualidade.md
+  - Resultados da EDA: resultados.md
+  - Pré-processamento: preprocessamento.md
+  - PCA: pca.md
+  - Limitações: limitacoes.md
+  - Reprodução: reproducao.md
+  - Notebook completo: notebook.md
+  - Checklist da rubrica: checklist.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+
+plugins:
+  - search:
+      lang: pt
