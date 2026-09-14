@@ -9157,9 +9157,10 @@ Mediana do target no teste: US$ 107.00
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Checkpoint:-regress%C3%A3o,-n%C3%A3o-classifica%C3%A7%C3%A3o">Checkpoint: regressão, não classificação<a class="anchor-link" href="#Checkpoint:-regress%C3%A3o,-n%C3%A3o-classifica%C3%A7%C3%A3o">¶</a></h3><p><code>price</code> é uma variável contínua. Portanto, não existem classes para verificar
-como balanceadas ou desbalanceadas. O equivalente neste problema é estudar a
-assimetria, a concentração e os valores extremos do target.</p>
+<h3 id="Checkpoint:-natureza-do-target">Checkpoint: natureza do target<a class="anchor-link" href="#Checkpoint:-natureza-do-target">¶</a></h3><p><code>price</code> é uma variável numérica contínua e define uma tarefa de regressão. O
+balanceamento de classes é um diagnóstico para alvos categóricos e, por isso,
+não se aplica aqui. Para este target, investigamos assimetria, concentração e
+valores extremos.</p>
 <p>A mediana próxima entre treino e teste é apenas uma verificação de razoabilidade;
 o teste continua reservado para a APS2. Não usamos <code>stratify=y</code> nem ajustamos
 transformadores com o teste.</p>
@@ -10901,106 +10902,106 @@ separação entre grupos.</p>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
 <style type="text/css">
-#T_49c7c_row0_col0 {
+#T_1487d_row0_col0 {
   background-color: #7d99c2;
   color: #f1f1f1;
 }
-#T_49c7c_row0_col1 {
+#T_1487d_row0_col1 {
   background-color: #90a6c7;
   color: #f1f1f1;
 }
-#T_49c7c_row1_col0 {
+#T_1487d_row1_col0 {
   background-color: #f9f5f5;
   color: #000000;
 }
-#T_49c7c_row1_col1 {
+#T_1487d_row1_col1 {
   background-color: #316fbc;
   color: #f1f1f1;
 }
-#T_49c7c_row2_col0 {
+#T_1487d_row2_col0 {
   background-color: #2369bd;
   color: #f1f1f1;
 }
-#T_49c7c_row2_col1 {
+#T_1487d_row2_col1 {
   background-color: #cb8481;
   color: #f1f1f1;
 }
-#T_49c7c_row3_col0 {
+#T_1487d_row3_col0 {
   background-color: #ac3f42;
   color: #f1f1f1;
 }
-#T_49c7c_row3_col1 {
+#T_1487d_row3_col1 {
   background-color: #93a8c8;
   color: #f1f1f1;
 }
-#T_49c7c_row4_col0 {
+#T_1487d_row4_col0 {
   background-color: #a9373b;
   color: #f1f1f1;
 }
-#T_49c7c_row4_col1 {
+#T_1487d_row4_col1 {
   background-color: #87a0c4;
   color: #f1f1f1;
 }
-#T_49c7c_row5_col0 {
+#T_1487d_row5_col0 {
   background-color: #5782bc;
   color: #f1f1f1;
 }
-#T_49c7c_row5_col1 {
+#T_1487d_row5_col1 {
   background-color: #b1494a;
   color: #f1f1f1;
 }
-#T_49c7c_row6_col0 {
+#T_1487d_row6_col0 {
   background-color: #faf0ef;
   color: #000000;
 }
-#T_49c7c_row6_col1 {
+#T_1487d_row6_col1 {
   background-color: #b75555;
   color: #f1f1f1;
 }
 </style>
-<table id="T_49c7c">
+<table id="T_1487d">
 <thead>
 <tr>
 <th class="blank level0"> </th>
-<th class="col_heading level0 col0" id="T_49c7c_level0_col0">PC1</th>
-<th class="col_heading level0 col1" id="T_49c7c_level0_col1">PC2</th>
+<th class="col_heading level0 col0" id="T_1487d_level0_col0">PC1</th>
+<th class="col_heading level0 col1" id="T_1487d_level0_col1">PC2</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th class="row_heading level0 row0" id="T_49c7c_level0_row0">latitude</th>
-<td class="data row0 col0" id="T_49c7c_row0_col0">-0.018709</td>
-<td class="data row0 col1" id="T_49c7c_row0_col1">0.018113</td>
+<th class="row_heading level0 row0" id="T_1487d_level0_row0">latitude</th>
+<td class="data row0 col0" id="T_1487d_row0_col0">-0.018709</td>
+<td class="data row0 col1" id="T_1487d_row0_col1">0.018113</td>
 </tr>
 <tr>
-<th class="row_heading level0 row1" id="T_49c7c_level0_row1">longitude</th>
-<td class="data row1 col0" id="T_49c7c_row1_col0">0.236467</td>
-<td class="data row1 col1" id="T_49c7c_row1_col1">-0.147050</td>
+<th class="row_heading level0 row1" id="T_1487d_level0_row1">longitude</th>
+<td class="data row1 col0" id="T_1487d_row1_col0">0.236467</td>
+<td class="data row1 col1" id="T_1487d_row1_col1">-0.147050</td>
 </tr>
 <tr>
-<th class="row_heading level0 row2" id="T_49c7c_level0_row2">minimum_nights</th>
-<td class="data row2 col0" id="T_49c7c_row2_col0">-0.164955</td>
-<td class="data row2 col1" id="T_49c7c_row2_col1">0.494640</td>
+<th class="row_heading level0 row2" id="T_1487d_level0_row2">minimum_nights</th>
+<td class="data row2 col0" id="T_1487d_row2_col0">-0.164955</td>
+<td class="data row2 col1" id="T_1487d_row2_col1">0.494640</td>
 </tr>
 <tr>
-<th class="row_heading level0 row3" id="T_49c7c_level0_row3">number_of_reviews</th>
-<td class="data row3 col0" id="T_49c7c_row3_col0">0.638690</td>
-<td class="data row3 col1" id="T_49c7c_row3_col1">0.025050</td>
+<th class="row_heading level0 row3" id="T_1487d_level0_row3">number_of_reviews</th>
+<td class="data row3 col0" id="T_1487d_row3_col0">0.638690</td>
+<td class="data row3 col1" id="T_1487d_row3_col1">0.025050</td>
 </tr>
 <tr>
-<th class="row_heading level0 row4" id="T_49c7c_level0_row4">reviews_per_month</th>
-<td class="data row4 col0" id="T_49c7c_row4_col0">0.655551</td>
-<td class="data row4 col1" id="T_49c7c_row4_col1">-0.000899</td>
+<th class="row_heading level0 row4" id="T_1487d_level0_row4">reviews_per_month</th>
+<td class="data row4 col0" id="T_1487d_row4_col0">0.655551</td>
+<td class="data row4 col1" id="T_1487d_row4_col1">-0.000899</td>
 </tr>
 <tr>
-<th class="row_heading level0 row5" id="T_49c7c_level0_row5">calculated_host_listings_count</th>
-<td class="data row5 col0" id="T_49c7c_row5_col0">-0.090484</td>
-<td class="data row5 col1" id="T_49c7c_row5_col1">0.618643</td>
+<th class="row_heading level0 row5" id="T_1487d_level0_row5">calculated_host_listings_count</th>
+<td class="data row5 col0" id="T_1487d_row5_col0">-0.090484</td>
+<td class="data row5 col1" id="T_1487d_row5_col1">0.618643</td>
 </tr>
 <tr>
-<th class="row_heading level0 row6" id="T_49c7c_level0_row6">availability_365</th>
-<td class="data row6 col0" id="T_49c7c_row6_col0">0.265827</td>
-<td class="data row6 col1" id="T_49c7c_row6_col1">0.591635</td>
+<th class="row_heading level0 row6" id="T_1487d_level0_row6">availability_365</th>
+<td class="data row6 col0" id="T_1487d_row6_col0">0.265827</td>
+<td class="data row6 col1" id="T_1487d_row6_col1">0.591635</td>
 </tr>
 </tbody>
 </table>
