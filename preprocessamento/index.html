@@ -661,11 +661,11 @@
 <p>A limpeza anterior ao split contém apenas operações determinísticas: remoção de
 duplicatas completas, remoção de targets inválidos e registro da ausência
 estrutural de avaliações.</p>
-<pre><code>dados após limpeza determinística
+<div class="highlight"><pre><span></span><code>dados após limpeza determinística
     ├── treino (80%) → aprende mediana, escala e categorias
     └── teste  (20%) → recebe as transformações aprendidas
-</code></pre>
-<p>Nenhum método fit recebe X_test.</p>
+</code></pre></div>
+<p>Nenhum método <code>fit</code> recebe <code>X_test</code>.</p>
 <h2 id="estrategias-adotadas">Estratégias adotadas</h2>
 <table>
 <thead>
@@ -697,14 +697,14 @@ estrutural de avaliações.</p>
 <td>Não cria ordem artificial</td>
 </tr>
 <tr>
-<td>Categoria desconhecida</td>
-<td>handle_unknown igual a ignore</td>
-<td>Permite transformar novos valores</td>
+<td>Categoria nova</td>
+<td><code>handle_unknown="ignore"</code></td>
+<td>Aceita valores novos</td>
 </tr>
 <tr>
 <td>IDs e nomes</td>
-<td>Exclusão do baseline</td>
-<td>Alta cardinalidade ou ausência de sentido quantitativo</td>
+<td>Exclusão</td>
+<td>Sem sentido quantitativo ou alta cardinalidade</td>
 </tr>
 <tr>
 <td>Target extremo</td>
@@ -713,7 +713,7 @@ estrutural de avaliações.</p>
 </tr>
 <tr>
 <td>Target assimétrico</td>
-<td>Avaliar log1p na APS2</td>
+<td>Avaliar <code>log1p</code></td>
 <td>Reduz a influência da cauda</td>
 </tr>
 </tbody>

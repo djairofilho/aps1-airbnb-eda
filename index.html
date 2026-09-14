@@ -292,6 +292,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escopo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#principais-resultados" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -602,6 +613,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escopo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#principais-resultados" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -655,17 +677,34 @@
 
 
 <h1 id="eda-dos-anuncios-do-airbnb-em-nova-york">EDA dos anúncios do Airbnb em Nova York</h1>
-<p><strong>APS1 de Machine Learning — Insper</strong><br>
-<strong>Autor:</strong> Djairo Dantas da Silva Filho<br>
-<strong>Data de entrega:</strong> 14/09/2026</p>
+<table>
+<thead>
+<tr>
+<th>Informação</th>
+<th>Detalhe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Projeto</td>
+<td>APS1 de Machine Learning — Insper</td>
+</tr>
+<tr>
+<td>Autor</td>
+<td>Djairo Dantas da Silva Filho</td>
+</tr>
+<tr>
+<td>Data de entrega</td>
+<td>14/09/2026</td>
+</tr>
+</tbody>
+</table>
 <p>Este projeto investiga como localização, tipo de acomodação, disponibilidade e
 atividade de avaliações se relacionam com o <strong>preço anunciado</strong> de uma diária do
 Airbnb em Nova York em 2019.</p>
-<blockquote>
-<p><strong>Escopo</strong></p>
+<h2 id="escopo">Escopo</h2>
 <p>Cada linha representa um anúncio, não uma reserva concluída. Os resultados
 descrevem preços anunciados e não receita, ocupação ou demanda efetiva.</p>
-</blockquote>
 <h2 id="principais-resultados">Principais resultados</h2>
 <table>
 <thead>
@@ -703,14 +742,14 @@ descrevem preços anunciados e não receita, ocupação ou demanda efetiva.</p>
 </table>
 <p><img alt="Distribuição do preço anunciado em escala original e logarítmica" src="assets/images/distribuicao-preco.png" /></p>
 <h2 id="caminho-da-analise">Caminho da análise</h2>
-<pre><code>dados brutos
+<div class="highlight"><pre><span></span><code>dados brutos
     → auditoria de qualidade
     → limpeza determinística
     → separação treino e teste
     → EDA apenas no treino
     → pipeline e PCA
     → preparação para APS2
-</code></pre>
+</code></pre></div>
 <h2 id="conclusao-executiva">Conclusão executiva</h2>
 <p>A distribuição de preços tem uma cauda longa e torna a mediana mais informativa
 que a média para descrever o anúncio típico. Tipo de acomodação e localização
@@ -720,7 +759,7 @@ aprender estatísticas do conjunto de teste.</p>
 <p>Manhattan e Brooklyn concentram 85,5% do treino, o conjunto cobre apenas
 anúncios presentes na plataforma e faltam características relevantes dos
 imóveis.</p>
-<p><a class="md-button md-button--primary" href="resultados/">Consultar os resultados completos</a>
+<p><a class="md-button md-button--primary" href="resultados/">Consultar os resultados</a>
 <a class="md-button" href="reproducao/">Executar o projeto</a></p>
 
 
