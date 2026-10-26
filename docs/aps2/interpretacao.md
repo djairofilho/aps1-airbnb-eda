@@ -11,7 +11,7 @@ Os coeficientes do Ridge representam mudanças na escala das variáveis **transf
 
 ## SHAP do modelo escolhido
 
-O modelo final é a **floresta com agrupamento de categorias raras**. `TreeExplainer` foi aplicado a **200 anúncios do teste** escolhidos com semente fixa. As contribuições SHAP foram calculadas nas colunas transformadas e depois somadas por variável original; valor-base mais contribuições reconstrói as previsões com diferença numérica inferior a US$ 0,01.
+O modelo final é a **floresta com agrupamento de categorias raras**. A análise global com `TreeExplainer` usa **200 anúncios do teste** escolhidos com semente fixa; três anúncios adicionais são explicados individualmente. As contribuições SHAP foram calculadas nas colunas transformadas e depois somadas por variável original; valor-base mais contribuições reconstrói as previsões com diferença numérica inferior a US$ 0,01.
 
 Nos gráficos detalhados, os números ao lado das variáveis numéricas estão na escala **padronizada** usada pelo modelo, não em graus de latitude/longitude ou dias originais. As contribuições horizontais, por sua vez, estão em US$.
 
@@ -42,7 +42,7 @@ As figuras mostram por que **o modelo** produziu cada valor, inclusive no caso a
 ## Duas limitações do modelo
 
 1. **Incerteza individual ausente.** A previsão é pontual. O MAE do conjunto não fornece um intervalo de preço calibrado para um anúncio específico; modelos quantílicos e cobertura em dados reservados seriam uma próxima etapa. [Exemplo de intervalos de previsão no scikit-learn.](https://scikit-learn.org/stable/auto_examples/ensemble/plot_gradient_boosting_quantile.html)
-2. **Atribuição instável entre variáveis relacionadas.** Localização aparece como coordenadas, borough e bairro. Quando variáveis estão associadas, coeficientes, importância das árvores e SHAP podem distribuir a contribuição de modos diferentes. As explicações descrevem o modelo ajustado, não efeitos causais.
+2. **Atribuição instável entre variáveis relacionadas.** Localização aparece como coordenadas, borough e bairro. Quando variáveis estão associadas, coeficientes, importância das árvores e SHAP podem distribuir a contribuição de modos diferentes. As explicações descrevem o modelo ajustado, não efeitos causais. [O scikit-learn mostra como a correlação afeta medidas de importância.](https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance_multicollinear.html)
 
 ## Duas limitações adicionais dos dados
 
@@ -61,5 +61,6 @@ O conjunto representa preços **anunciados** em 2019. Não mede preço pago, ocu
 - [Inside Airbnb — Data Assumptions](https://insideairbnb.com/data-assumptions/): critérios e ressalvas sobre a coleta e a localização dos anúncios.
 - [Scikit-learn — `GroupKFold`](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupKFold.html): validação com grupos não sobrepostos.
 - [Scikit-learn — importâncias de árvores](https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html): limites da importância por impureza.
+- [Scikit-learn — variáveis correlacionadas](https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance_multicollinear.html): distribuição e interpretação da importância entre variáveis relacionadas.
 - [Scikit-learn — intervalos de previsão](https://scikit-learn.org/stable/auto_examples/ensemble/plot_gradient_boosting_quantile.html): alternativa para expressar incerteza.
 - [SHAP — `TreeExplainer`](https://shap.readthedocs.io/en/latest/generated/shap.TreeExplainer.html) e [`LinearExplainer`](https://shap.readthedocs.io/en/latest/generated/shap.LinearExplainer.html): explicações globais e individuais.
