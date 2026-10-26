@@ -2,42 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://djairofilho.github.io/aps1-airbnb-eda/</loc>
-         <lastmod>2026-09-14</lastmod>
+         <lastmod>2026-10-26</lastmod>
+    </url>
+    <url>
+         <loc>https://djairofilho.github.io/aps1-airbnb-eda/aps1/</loc>
+         <lastmod>2026-10-26</lastmod>
     </url>
     <url>
          <loc>https://djairofilho.github.io/aps1-airbnb-eda/checklist/</loc>
-         <lastmod>2026-09-14</lastmod>
+         <lastmod>2026-10-26</lastmod>
     </url>
     <url>
          <loc>https://djairofilho.github.io/aps1-airbnb-eda/dados/</loc>
-         <lastmod>2026-09-14</lastmod>
+         <lastmod>2026-10-26</lastmod>
     </url>
     <url>
          <loc>https://djairofilho.github.io/aps1-airbnb-eda/limitacoes/</loc>
-         <lastmod>2026-09-14</lastmod>
+         <lastmod>2026-10-26</lastmod>
     </url>
     <url>
          <loc>https://djairofilho.github.io/aps1-airbnb-eda/notebook/</loc>
-         <lastmod>2026-09-14</lastmod>
+         <lastmod>2026-10-26</lastmod>
     </url>
     <url>
          <loc>https://djairofilho.github.io/aps1-airbnb-eda/pca/</loc>
-         <lastmod>2026-09-14</lastmod>
+         <lastmod>2026-10-26</lastmod>
     </url>
     <url>
          <loc>https://djairofilho.github.io/aps1-airbnb-eda/preprocessamento/</loc>
-         <lastmod>2026-09-14</lastmod>
+         <lastmod>2026-10-26</lastmod>
     </url>
     <url>
          <loc>https://djairofilho.github.io/aps1-airbnb-eda/qualidade/</loc>
-         <lastmod>2026-09-14</lastmod>
+         <lastmod>2026-10-26</lastmod>
     </url>
     <url>
          <loc>https://djairofilho.github.io/aps1-airbnb-eda/reproducao/</loc>
-         <lastmod>2026-09-14</lastmod>
+         <lastmod>2026-10-26</lastmod>
     </url>
     <url>
          <loc>https://djairofilho.github.io/aps1-airbnb-eda/resultados/</loc>
-         <lastmod>2026-09-14</lastmod>
+         <lastmod>2026-10-26</lastmod>
+    </url>
+    <url>
+         <loc>https://djairofilho.github.io/aps1-airbnb-eda/aps2/</loc>
+         <lastmod>2026-10-26</lastmod>
+    </url>
+    <url>
+         <loc>https://djairofilho.github.io/aps1-airbnb-eda/aps2/avaliacao/</loc>
+         <lastmod>2026-10-26</lastmod>
+    </url>
+    <url>
+         <loc>https://djairofilho.github.io/aps1-airbnb-eda/aps2/interpretacao/</loc>
+         <lastmod>2026-10-26</lastmod>
+    </url>
+    <url>
+         <loc>https://djairofilho.github.io/aps1-airbnb-eda/aps2/notebook/</loc>
+         <lastmod>2026-10-26</lastmod>
     </url>
 </urlset>

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Análise exploratória dos anúncios do Airbnb em Nova York em 2019">
+        <meta name="description" content="EDA e regressão do preço anunciado dos anúncios Airbnb em Nova York em 2019">
       
       
         <meta name="author" content="Djairo Dantas da Silva Filho">
@@ -18,7 +18,7 @@
         <link rel="prev" href="../pca/">
       
       
-        <link rel="next" href="../reproducao/">
+        <link rel="next" href="../notebook/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Limitações - APS1 — EDA Airbnb NYC</title>
+        <title>Limitações - Projeto de Machine Learning — Airbnb NYC</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#limitacoes" class="md-skip">
+        <a href="#aps1-limitacoes" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -94,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href=".." title="APS1 — EDA Airbnb NYC" class="md-header__button md-logo" aria-label="APS1 — EDA Airbnb NYC" data-md-component="logo">
+    <a href=".." title="Projeto de Machine Learning — Airbnb NYC" class="md-header__button md-logo" aria-label="Projeto de Machine Learning — Airbnb NYC" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +108,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            APS1 — EDA Airbnb NYC
+            Projeto de Machine Learning — Airbnb NYC
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -204,13 +204,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="APS1 — EDA Airbnb NYC" class="md-nav__button md-logo" aria-label="APS1 — EDA Airbnb NYC" data-md-component="logo">
+    <a href=".." title="Projeto de Machine Learning — Airbnb NYC" class="md-nav__button md-logo" aria-label="Projeto de Machine Learning — Airbnb NYC" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    APS1 — EDA Airbnb NYC
+    Projeto de Machine Learning — Airbnb NYC
   </label>
   
     <div class="md-nav__source">
@@ -258,17 +258,71 @@
       
   
   
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APS1 — exploração dos dados
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    APS1 — exploração dos dados
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../dados/" class="md-nav__link">
+      <a href="../aps1/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Dados
+    Visão da APS1
   
 
     
@@ -280,9 +334,38 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     
-      
-      
+  
+    Dados e pergunta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
   
@@ -295,7 +378,7 @@
   <span class="md-ellipsis">
     
   
-    Qualidade, extremos e vieses
+    Qualidade e vieses
   
 
     
@@ -307,9 +390,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -334,9 +418,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -361,9 +446,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -388,9 +474,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
     
@@ -489,10 +576,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proximos-controles-na-aps2" class="md-nav__link">
+  <a href="#questoes-levadas-a-aps2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Próximos controles na APS2
+        Questões levadas à APS2
       
     </span>
   </a>
@@ -506,36 +593,10 @@
     </li>
   
 
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reproducao/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Reprodução
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -560,9 +621,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -575,7 +637,213 @@
   <span class="md-ellipsis">
     
   
-    Checklist da rubrica
+    Checklist da APS1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APS2 — modelagem e avaliação
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    APS2 — modelagem e avaliação
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aps2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocolo e comparação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aps2/avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avaliação no teste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aps2/interpretacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interpretação e discussão
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aps2/notebook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notebook completo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reproducao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Como reproduzir
   
 
     
@@ -648,10 +916,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proximos-controles-na-aps2" class="md-nav__link">
+  <a href="#questoes-levadas-a-aps2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Próximos controles na APS2
+        Questões levadas à APS2
       
     </span>
   </a>
@@ -678,7 +946,8 @@
   
 
 
-<h1 id="limitacoes">Limitações</h1>
+<h1 id="aps1-limitacoes">APS1 — limitações</h1>
+<p>Estas limitações dizem respeito ao recorte exploratório. A <a href="../aps2/interpretacao/">discussão crítica da APS2</a> examina outras limitações do modelo e dos dados.</p>
 <h2 id="o-que-os-dados-permitem-afirmar">O que os dados permitem afirmar</h2>
 <p>Os resultados descrevem associações entre características e preços anunciados
 no snapshot de Nova York em 2019.</p>
@@ -702,15 +971,15 @@ no snapshot de Nova York em 2019.</p>
 <li>concentração geográfica;</li>
 <li>possível diferença de erro entre grupos.</li>
 </ul>
-<h2 id="proximos-controles-na-aps2">Próximos controles na APS2</h2>
+<h2 id="questoes-levadas-a-aps2">Questões levadas à APS2</h2>
 <ol>
-<li>Comparar target original e transformação log1p.</li>
-<li>Usar validação cruzada somente no treino.</li>
+<li>Validar os modelos apenas no treino e reservar o teste para a avaliação final.</li>
 <li>Reportar MAE e RMSE na escala de dólares.</li>
 <li>Analisar resíduos e erros por borough e tipo.</li>
-<li>Comparar baseline linear com modelos não lineares.</li>
-<li>Avaliar se categorias raras de bairro precisam de agrupamento.</li>
+<li>Comparar um modelo linear com um conjunto de árvores e um Dummy.</li>
+<li>Testar o agrupamento de categorias raras de bairro.</li>
 </ol>
+<p>A transformação <code>log1p</code> do target continua como hipótese para uma investigação posterior. A APS2 mantém a escala original para comparar de modo isolado a mudança no encoder.</p>
 
 
 

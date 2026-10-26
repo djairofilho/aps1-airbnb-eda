@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Análise exploratória dos anúncios do Airbnb em Nova York em 2019">
+        <meta name="description" content="EDA e regressão do preço anunciado dos anúncios Airbnb em Nova York em 2019">
       
       
         <meta name="author" content="Djairo Dantas da Silva Filho">
@@ -15,10 +15,8 @@
         <link rel="canonical" href="https://djairofilho.github.io/aps1-airbnb-eda/reproducao/">
       
       
-        <link rel="prev" href="../limitacoes/">
+        <link rel="prev" href="../aps2/notebook/">
       
-      
-        <link rel="next" href="../notebook/">
       
       
         
@@ -29,7 +27,7 @@
     
     
       
-        <title>Reprodução - APS1 — EDA Airbnb NYC</title>
+        <title>Como reproduzir - Projeto de Machine Learning — Airbnb NYC</title>
       
     
     
@@ -94,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href=".." title="APS1 — EDA Airbnb NYC" class="md-header__button md-logo" aria-label="APS1 — EDA Airbnb NYC" data-md-component="logo">
+    <a href=".." title="Projeto de Machine Learning — Airbnb NYC" class="md-header__button md-logo" aria-label="Projeto de Machine Learning — Airbnb NYC" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,13 +106,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            APS1 — EDA Airbnb NYC
+            Projeto de Machine Learning — Airbnb NYC
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reprodução
+              Como reproduzir
             
           </span>
         </div>
@@ -204,13 +202,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="APS1 — EDA Airbnb NYC" class="md-nav__button md-logo" aria-label="APS1 — EDA Airbnb NYC" data-md-component="logo">
+    <a href=".." title="Projeto de Machine Learning — Airbnb NYC" class="md-nav__button md-logo" aria-label="Projeto de Machine Learning — Airbnb NYC" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    APS1 — EDA Airbnb NYC
+    Projeto de Machine Learning — Airbnb NYC
   </label>
   
     <div class="md-nav__source">
@@ -260,15 +258,67 @@
   
   
   
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APS1 — exploração dos dados
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    APS1 — exploração dos dados
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../dados/" class="md-nav__link">
+      <a href="../aps1/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Dados
+    Visão da APS1
   
 
     
@@ -280,9 +330,38 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     
-      
-      
+  
+    Dados e pergunta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
   
@@ -295,7 +374,7 @@
   <span class="md-ellipsis">
     
   
-    Qualidade, extremos e vieses
+    Qualidade e vieses
   
 
     
@@ -307,9 +386,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -334,9 +414,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -361,9 +442,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -388,9 +470,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -412,6 +495,241 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notebook completo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist da APS1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APS2 — modelagem e avaliação
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    APS2 — modelagem e avaliação
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aps2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocolo e comparação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aps2/avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avaliação no teste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aps2/interpretacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interpretação e discussão
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aps2/notebook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notebook completo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -439,7 +757,7 @@
   <span class="md-ellipsis">
     
   
-    Reprodução
+    Como reproduzir
   
 
     
@@ -457,7 +775,7 @@
   <span class="md-ellipsis">
     
   
-    Reprodução
+    Como reproduzir
   
 
     
@@ -505,10 +823,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#executar-o-notebook" class="md-nav__link">
+  <a href="#executar-os-notebooks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Executar o notebook
+        Executar os notebooks
       
     </span>
   </a>
@@ -541,60 +859,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../notebook/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Notebook completo
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../checklist/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Checklist da rubrica
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -648,10 +912,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#executar-o-notebook" class="md-nav__link">
+  <a href="#executar-os-notebooks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Executar o notebook
+        Executar os notebooks
       
     </span>
   </a>
@@ -713,15 +977,20 @@
 <span class="nb">cd </span><span class="n">aps1-airbnb-eda</span>
 <span class="n">uv</span> <span class="n">sync</span> <span class="p">-</span><span class="n">-locked</span>
 </code></pre></div>
-<h2 id="executar-o-notebook">Executar o notebook</h2>
+<h2 id="executar-os-notebooks">Executar os notebooks</h2>
+<p>A APS1 documenta a exploração; a APS2 reproduz as etapas necessárias de preparação e executa a modelagem. Cada notebook pode ser iniciado com um kernel limpo.</p>
 <div class="highlight"><pre><span></span><code><span class="n">uv</span> <span class="n">run</span> <span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="p">-</span><span class="n">-execute</span> <span class="p">-</span><span class="n">-to</span> <span class="n">notebook</span> <span class="p">-</span><span class="n">-inplace</span> <span class="p">`</span>
   <span class="n">notebooks</span><span class="p">/</span><span class="n">APS1_Airbnb_EDA</span><span class="p">.</span><span class="n">ipynb</span>
+<span class="n">uv</span> <span class="n">run</span> <span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="p">-</span><span class="n">-execute</span> <span class="p">-</span><span class="n">-to</span> <span class="n">notebook</span> <span class="p">-</span><span class="n">-inplace</span> <span class="p">`</span>
+  <span class="n">notebooks</span><span class="p">/</span><span class="n">APS2_Airbnb_Regressao</span><span class="p">.</span><span class="n">ipynb</span> <span class="p">`</span>
+  <span class="p">-</span><span class="n">-ExecutePreprocessor</span><span class="p">.</span><span class="n">timeout</span><span class="p">=</span><span class="n">1800</span>
 </code></pre></div>
 <p>Ou abrir o ambiente interativo:</p>
 <div class="highlight"><pre><span></span><code><span class="n">uv</span> <span class="n">run</span> <span class="n">jupyter</span> <span class="n">lab</span>
 </code></pre></div>
 <h2 id="construir-a-documentacao">Construir a documentação</h2>
 <div class="highlight"><pre><span></span><code><span class="n">uv</span> <span class="n">run</span> <span class="n">python</span> <span class="n">scripts</span><span class="p">/</span><span class="n">export_docs</span><span class="p">.</span><span class="n">py</span>
+<span class="n">uv</span> <span class="n">run</span> <span class="n">python</span> <span class="n">scripts</span><span class="p">/</span><span class="n">export_aps2_docs</span><span class="p">.</span><span class="n">py</span>
 <span class="n">uv</span> <span class="n">run</span> <span class="n">mkdocs</span> <span class="n">build</span> <span class="p">-</span><span class="n">-strict</span>
 </code></pre></div>
 <p>Para visualizar localmente:</p>
@@ -738,6 +1007,7 @@
 <p>Depois pode ser instalado com:</p>
 <div class="highlight"><pre><span></span><code><span class="n">python</span> <span class="n">-m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">-r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
 </code></pre></div>
+<p>O CSV local é verificado por SHA-256. Na ausência dele, os notebooks podem obtê-lo da fonte indicada via <code>kagglehub</code>; a execução exige o mesmo conteúdo validado pelo hash.</p>
 
 
 
