@@ -1046,7 +1046,7 @@
 </table>
 <p>Os coeficientes do Ridge representam mudanças na escala das variáveis <strong>transformadas</strong>; colunas numéricas foram padronizadas, enquanto as colunas one-hot representam categorias. A importância interna da floresta mede redução de impureza e pode favorecer variáveis com mais possibilidades de corte. Essas medidas explicam o ajuste, mas não demonstram causalidade. <a href="https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html">O scikit-learn documenta a limitação da importância por impureza.</a></p>
 <h2 id="shap-do-modelo-escolhido">SHAP do modelo escolhido</h2>
-<p>O modelo final é a <strong>floresta com agrupamento de categorias raras</strong>. <code>TreeExplainer</code> foi aplicado a <strong>200 anúncios do teste</strong> escolhidos com semente fixa. As contribuições SHAP foram calculadas nas colunas transformadas e depois somadas por variável original; valor-base mais contribuições reconstrói as previsões com diferença numérica inferior a US$ 0,01.</p>
+<p>O modelo final é a <strong>floresta com agrupamento de categorias raras</strong>. A análise global com <code>TreeExplainer</code> usa <strong>200 anúncios do teste</strong> escolhidos com semente fixa; três anúncios adicionais são explicados individualmente. As contribuições SHAP foram calculadas nas colunas transformadas e depois somadas por variável original; valor-base mais contribuições reconstrói as previsões com diferença numérica inferior a US$ 0,01.</p>
 <p>Nos gráficos detalhados, os números ao lado das variáveis numéricas estão na escala <strong>padronizada</strong> usada pelo modelo, não em graus de latitude/longitude ou dias originais. As contribuições horizontais, por sua vez, estão em US$.</p>
 <p>As maiores contribuições absolutas médias por variável original são <strong>tipo de acomodação (US$ 58,99)</strong>, <strong>longitude (US$ 26,47)</strong> e <strong>disponibilidade anual (US$ 21,45)</strong>. A divergência parcial em relação ao ranking por impureza mostra que as medidas resumem aspectos diferentes do ajuste. <a href="https://shap.readthedocs.io/en/latest/generated/shap.TreeExplainer.html">Documentação do <code>TreeExplainer</code>.</a></p>
 <p><img alt="Importância SHAP das variáveis originais" src="../../assets/images/aps2/shap-variaveis.png" /></p>
@@ -1090,7 +1090,7 @@
 <h2 id="duas-limitacoes-do-modelo">Duas limitações do modelo</h2>
 <ol>
 <li><strong>Incerteza individual ausente.</strong> A previsão é pontual. O MAE do conjunto não fornece um intervalo de preço calibrado para um anúncio específico; modelos quantílicos e cobertura em dados reservados seriam uma próxima etapa. <a href="https://scikit-learn.org/stable/auto_examples/ensemble/plot_gradient_boosting_quantile.html">Exemplo de intervalos de previsão no scikit-learn.</a></li>
-<li><strong>Atribuição instável entre variáveis relacionadas.</strong> Localização aparece como coordenadas, borough e bairro. Quando variáveis estão associadas, coeficientes, importância das árvores e SHAP podem distribuir a contribuição de modos diferentes. As explicações descrevem o modelo ajustado, não efeitos causais.</li>
+<li><strong>Atribuição instável entre variáveis relacionadas.</strong> Localização aparece como coordenadas, borough e bairro. Quando variáveis estão associadas, coeficientes, importância das árvores e SHAP podem distribuir a contribuição de modos diferentes. As explicações descrevem o modelo ajustado, não efeitos causais. <a href="https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance_multicollinear.html">O scikit-learn mostra como a correlação afeta medidas de importância.</a></li>
 </ol>
 <h2 id="duas-limitacoes-adicionais-dos-dados">Duas limitações adicionais dos dados</h2>
 <ol>
@@ -1108,6 +1108,7 @@
 <li><a href="https://insideairbnb.com/data-assumptions/">Inside Airbnb — Data Assumptions</a>: critérios e ressalvas sobre a coleta e a localização dos anúncios.</li>
 <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupKFold.html">Scikit-learn — <code>GroupKFold</code></a>: validação com grupos não sobrepostos.</li>
 <li><a href="https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html">Scikit-learn — importâncias de árvores</a>: limites da importância por impureza.</li>
+<li><a href="https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance_multicollinear.html">Scikit-learn — variáveis correlacionadas</a>: distribuição e interpretação da importância entre variáveis relacionadas.</li>
 <li><a href="https://scikit-learn.org/stable/auto_examples/ensemble/plot_gradient_boosting_quantile.html">Scikit-learn — intervalos de previsão</a>: alternativa para expressar incerteza.</li>
 <li><a href="https://shap.readthedocs.io/en/latest/generated/shap.TreeExplainer.html">SHAP — <code>TreeExplainer</code></a> e <a href="https://shap.readthedocs.io/en/latest/generated/shap.LinearExplainer.html"><code>LinearExplainer</code></a>: explicações globais e individuais.</li>
 </ul>
