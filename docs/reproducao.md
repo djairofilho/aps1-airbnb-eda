@@ -16,11 +16,16 @@ cd aps1-airbnb-eda
 uv sync --locked
 ```
 
-## Executar o notebook
+## Executar os notebooks
+
+A APS1 documenta a exploração; a APS2 reproduz as etapas necessárias de preparação e executa a modelagem. Cada notebook pode ser iniciado com um kernel limpo.
 
 ```powershell
 uv run jupyter nbconvert --execute --to notebook --inplace `
   notebooks/APS1_Airbnb_EDA.ipynb
+uv run jupyter nbconvert --execute --to notebook --inplace `
+  notebooks/APS2_Airbnb_Regressao.ipynb `
+  --ExecutePreprocessor.timeout=1800
 ```
 
 Ou abrir o ambiente interativo:
@@ -33,6 +38,7 @@ uv run jupyter lab
 
 ```powershell
 uv run python scripts/export_docs.py
+uv run python scripts/export_aps2_docs.py
 uv run mkdocs build --strict
 ```
 
@@ -59,3 +65,5 @@ Depois pode ser instalado com:
 ```powershell
 python -m pip install -r requirements.txt
 ```
+
+O CSV local é verificado por SHA-256. Na ausência dele, os notebooks podem obtê-lo da fonte indicada via `kagglehub`; a execução exige o mesmo conteúdo validado pelo hash.

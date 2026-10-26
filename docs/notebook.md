@@ -1,12 +1,14 @@
-# Notebook completo
+# APS1 — notebook completo
 
-O notebook contém o código, as tabelas, as figuras e as interpretações salvas
+Este notebook contém o código, as tabelas, as figuras e as interpretações salvas
 após uma execução completa.
 
 [Visualizar o notebook](notebook-completo.html){ .md-button .md-button--primary }
 
 Também é possível consultar o [arquivo IPYNB no GitHub][notebook-github] ou
 seguir as [instruções de reprodução](reproducao.md).
+
+A etapa seguinte possui um [notebook próprio de modelagem](aps2/notebook.md).
 
 ## Nota sobre os formatos
 

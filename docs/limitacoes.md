@@ -1,4 +1,6 @@
-# Limitações
+# APS1 — limitações
+
+Estas limitações dizem respeito ao recorte exploratório. A [discussão crítica da APS2](aps2/interpretacao.md) examina outras limitações do modelo e dos dados.
 
 ## O que os dados permitem afirmar
 
@@ -25,11 +27,12 @@ no snapshot de Nova York em 2019.
 - concentração geográfica;
 - possível diferença de erro entre grupos.
 
-## Próximos controles na APS2
+## Questões levadas à APS2
 
-1. Comparar target original e transformação log1p.
-2. Usar validação cruzada somente no treino.
-3. Reportar MAE e RMSE na escala de dólares.
-4. Analisar resíduos e erros por borough e tipo.
-5. Comparar baseline linear com modelos não lineares.
-6. Avaliar se categorias raras de bairro precisam de agrupamento.
+1. Validar os modelos apenas no treino e reservar o teste para a avaliação final.
+2. Reportar MAE e RMSE na escala de dólares.
+3. Analisar resíduos e erros por borough e tipo.
+4. Comparar um modelo linear com um conjunto de árvores e um Dummy.
+5. Testar o agrupamento de categorias raras de bairro.
+
+A transformação `log1p` do target continua como hipótese para uma investigação posterior. A APS2 mantém a escala original para comparar de modo isolado a mudança no encoder.

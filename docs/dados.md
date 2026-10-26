@@ -1,4 +1,6 @@
-# Dados e pergunta de pesquisa
+# APS1 — dados e pergunta de pesquisa
+
+Esta página documenta o recorte estudado na exploração. A [APS2](aps2/index.md) utiliza o mesmo CSV e a mesma divisão para modelar o preço anunciado.
 
 ## Fonte
 
@@ -17,7 +19,7 @@ e420db40ff10fcb40efc1b5b1648ee0b18a48f4e4537155cecc59fe95d18783a
 
 > Como localização, tipo de acomodação, disponibilidade e atividade de
 > avaliações se relacionam com o preço anunciado de uma diária do Airbnb em
-> Nova York em 2019, e como preparar esses dados para um futuro modelo de
+> Nova York em 2019, e como preparar esses dados para a etapa de
 > regressão?
 
 ## Dicionário das variáveis

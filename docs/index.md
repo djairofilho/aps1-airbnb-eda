@@ -1,57 +1,25 @@
-# EDA dos anúncios do Airbnb em Nova York
+# Projeto de Machine Learning — Airbnb NYC
 
-| Informação | Detalhe |
-|---|---|
-| Projeto | APS1 de Machine Learning — Insper |
-| Autor | Djairo Dantas da Silva Filho |
-| Data de entrega | 14/09/2026 |
+**Autor:** Djairo Dantas da Silva Filho · **Disciplina:** Machine Learning, Insper · **Dados:** anúncios de Nova York em 2019
 
-Este projeto investiga como localização, tipo de acomodação, disponibilidade e
-atividade de avaliações se relacionam com o **preço anunciado** de uma diária no
-snapshot do Airbnb em Nova York em 2019.
+O projeto investiga o **preço anunciado por noite** de imóveis no Airbnb em duas etapas. Cada linha do dataset representa um anúncio, e o preço não equivale ao valor pago pelo hóspede. A primeira etapa estuda os dados e define o pré-processamento; a segunda compara modelos de regressão e avalia o escolhido em dados reservados.
 
-## Escopo
+| Etapa | Data | Pergunta principal | Entregas |
+|---|---|---|---|
+| **APS1 — exploração dos dados** | 14/09/2026 | Como as variáveis se distribuem e se relacionam com o preço? | Auditoria de qualidade, gráficos, decisões de pré-processamento e PCA. |
+| **APS2 — modelagem e avaliação** | 26/10/2026 | Quão bem conseguimos prever o preço anunciado de um anúncio não usado no ajuste? | Três modelos, validação cruzada, mudança no pipeline, avaliação no teste, SHAP e discussão crítica. |
 
-Cada linha representa um anúncio, não uma reserva concluída. O arquivo é um
-snapshot, não uma série histórica de preços. Os resultados descrevem preços
-anunciados e não receita, ocupação ou demanda efetiva.
+[Explorar a APS1](aps1.md){ .md-button }
+[Ver a APS2](aps2/index.md){ .md-button .md-button--primary }
 
-## Principais resultados
-
-| Evidência | Resultado |
-|---|---:|
-| Anúncios na base original | 48.895 |
-| Mediana do preço no treino | US$ 106 |
-| Média do preço no treino | US$ 153,18 |
-| Mediana de acomodação inteira | US$ 160 |
-| Mediana de Manhattan | US$ 150 |
-| Variância explicada por PC1 + PC2 | 43,8% |
-
-![Distribuição do preço anunciado em escala original e logarítmica](assets/images/distribuicao-preco.png)
-
-## Caminho da análise
+## Como as etapas se conectam
 
 ```text
-dados brutos
-    → auditoria de qualidade
-    → limpeza determinística
-    → separação treino e teste
-    → EDA apenas no treino
-    → pipeline e PCA
-    → preparação para APS2
+CSV de 2019
+    → APS1: limpeza determinística, divisão treino/teste e EDA no treino
+    → APS1: pipeline de imputação, padronização e one-hot
+    → APS2: modelos e seleção somente no treino
+    → APS2: avaliação final no teste reservado
 ```
 
-## Conclusão executiva
-
-A distribuição de preços tem uma cauda longa e torna a mediana mais informativa
-que a média para descrever o anúncio típico. Tipo de acomodação e localização
-separam grupos com preços bastante diferentes, enquanto correlações lineares
-isoladas com o target são fracas. O pipeline preserva essas informações sem
-aprender estatísticas do conjunto de teste.
-
-Manhattan e Brooklyn concentram 85,5% do treino, o conjunto cobre apenas
-anúncios presentes na plataforma e faltam características relevantes dos
-imóveis.
-
-[Consultar os resultados](resultados.md){ .md-button .md-button--primary }
-[Executar o projeto](reproducao.md){ .md-button }
+A APS2 reproduz a divisão e o pipeline definidos na APS1. A documentação de cada etapa permanece separada no menu, com seus próprios resultados, notebook e limitações. Veja [como reproduzir o projeto](reproducao.md).

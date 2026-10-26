@@ -1,4 +1,6 @@
-# Resultados da EDA
+# APS1 — resultados da EDA
+
+Os resultados abaixo foram obtidos apenas no conjunto de treino. Eles motivam as escolhas de modelos e o experimento de categorias raras apresentados na [APS2](aps2/index.md).
 
 ## Distribuições numéricas
 
@@ -6,8 +8,7 @@
 
 O preço possui forte cauda à direita. A mediana de US$ 106 é menor que a média
 de US$ 153,18, mostrando que poucos anúncios caros deslocam a média. A
-transformação log1p é uma hipótese para a APS2, com avaliação final também na
-escala original de dólares.
+A transformação `log1p` ajudou a visualizar a distribuição. Na APS2, o target permanece em dólares para que a mudança isolada no pipeline seja o agrupamento de categorias raras.
 
 ![Mínimo de noites e disponibilidade anual](assets/images/distribuicoes-numericas.png)
 

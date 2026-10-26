@@ -1,4 +1,6 @@
-# Qualidade, extremos e vieses
+# APS1 — qualidade, extremos e vieses
+
+A auditoria desta etapa define quais registros são válidos para a [modelagem da APS2](aps2/index.md). Os valores extremos plausíveis permanecem na base.
 
 ## Ausências e consistência
 
@@ -56,4 +58,4 @@ Outros riscos:
 - **Variáveis omitidas:** faltam tamanho, comodidades, taxas e estado do imóvel.
 - **Temporalidade:** os dados são históricos e não representam o mercado atual.
 
-Na APS2, o erro deverá ser analisado também por borough e tipo de acomodação.
+Na [avaliação da APS2](aps2/avaliacao.md), o erro é analisado também por borough e tipo de acomodação.

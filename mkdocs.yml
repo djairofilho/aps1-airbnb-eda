@@ -1,5 +1,5 @@
-site_name: APS1 — EDA Airbnb NYC
-site_description: Análise exploratória dos anúncios do Airbnb em Nova York em 2019
+site_name: Projeto de Machine Learning — Airbnb NYC
+site_description: EDA e regressão do preço anunciado dos anúncios Airbnb em Nova York em 2019
 site_author: Djairo Dantas da Silva Filho
 site_url: https://djairofilho.github.io/aps1-airbnb-eda/
 repo_url: https://github.com/djairofilho/aps1-airbnb-eda
@@ -19,15 +19,22 @@ theme:
 
 nav:
   - Visão geral: index.md
-  - Dados: dados.md
-  - Qualidade, extremos e vieses: qualidade.md
-  - Resultados da EDA: resultados.md
-  - Pré-processamento: preprocessamento.md
-  - PCA: pca.md
-  - Limitações: limitacoes.md
-  - Reprodução: reproducao.md
-  - Notebook completo: notebook.md
-  - Checklist da rubrica: checklist.md
+  - APS1 — exploração dos dados:
+      - Visão da APS1: aps1.md
+      - Dados e pergunta: dados.md
+      - Qualidade e vieses: qualidade.md
+      - Resultados da EDA: resultados.md
+      - Pré-processamento: preprocessamento.md
+      - PCA: pca.md
+      - Limitações: limitacoes.md
+      - Notebook completo: notebook.md
+      - Checklist da APS1: checklist.md
+  - APS2 — modelagem e avaliação:
+      - Protocolo e comparação: aps2/index.md
+      - Avaliação no teste: aps2/avaliacao.md
+      - Interpretação e discussão: aps2/interpretacao.md
+      - Notebook completo: aps2/notebook.md
+  - Como reproduzir: reproducao.md
 
 markdown_extensions:
   - admonition

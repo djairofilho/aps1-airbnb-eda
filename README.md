@@ -1,16 +1,17 @@
-# APS1 — EDA dos anúncios do Airbnb em Nova York
+# Projeto de Machine Learning — Airbnb em Nova York
 
 [Documentação pública](https://djairofilho.github.io/aps1-airbnb-eda/) ·
-[Notebook](notebooks/APS1_Airbnb_EDA.ipynb) ·
+[APS1: EDA](notebooks/APS1_Airbnb_EDA.ipynb) ·
+[APS2: regressão](notebooks/APS2_Airbnb_Regressao.ipynb) ·
 [Dataset](data/raw/AB_NYC_2019.csv)
 
-Análise exploratória do conjunto **New York City Airbnb Open Data**, realizada
-para a disciplina de Machine Learning do Insper.
+Exploração e modelagem do conjunto **New York City Airbnb Open Data** para a
+disciplina de Machine Learning do Insper.
 
 O projeto investiga como localização, tipo de acomodação, disponibilidade e
-atividade de avaliações se relacionam com o preço anunciado de uma diária no
-snapshot de Nova York em 2019. Esta é a primeira etapa de um projeto de
-regressão.
+atividade de avaliações se relacionam com o preço anunciado por noite no recorte
+de Nova York em 2019. A APS1 audita os dados e define o pré-processamento; a
+APS2 compara modelos de regressão, avalia o vencedor no teste e o interpreta.
 
 ## Autor
 
@@ -18,7 +19,8 @@ Djairo Dantas da Silva Filho
 
 ## Conteúdo
 
-- [Notebook executado](notebooks/APS1_Airbnb_EDA.ipynb)
+- [APS1 — notebook executado](notebooks/APS1_Airbnb_EDA.ipynb)
+- [APS2 — notebook executado](notebooks/APS2_Airbnb_Regressao.ipynb)
 - [Plano e checklist da APS1](PLANO_APS1_AIRBNB.md)
 - [Configuração do projeto](pyproject.toml)
 - [Ambiente reproduzível](uv.lock)
@@ -51,10 +53,11 @@ uv sync --locked
 uv run jupyter lab
 ```
 
-Para executar o notebook completo sem abrir a interface:
+Para executar os dois notebooks sem abrir a interface:
 
 ```powershell
 uv run jupyter nbconvert --execute --to notebook --inplace notebooks/APS1_Airbnb_EDA.ipynb
+uv run jupyter nbconvert --execute --to notebook --inplace notebooks/APS2_Airbnb_Regressao.ipynb --ExecutePreprocessor.timeout=1800
 ```
 
 ## Alternativa com pip
@@ -67,6 +70,7 @@ python -m venv .venv
 .venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 python -m jupyter nbconvert --execute --to notebook --inplace notebooks/APS1_Airbnb_EDA.ipynb
+python -m jupyter nbconvert --execute --to notebook --inplace notebooks/APS2_Airbnb_Regressao.ipynb --ExecutePreprocessor.timeout=1800
 ```
 
 Ao alterar dependências, atualize o lockfile e gere novamente o arquivo de
@@ -83,6 +87,8 @@ uv export --all-groups `
 
 ## Principais resultados
 
+### APS1
+
 - O preço anunciado apresenta forte assimetria à direita.
 - Acomodações inteiras e anúncios em Manhattan têm preços típicos maiores.
 - As ausências em variáveis de avaliação são estruturais para anúncios sem
@@ -91,6 +97,17 @@ uv export --all-groups `
   dados de teste.
 - Os dois primeiros componentes do PCA explicam aproximadamente 43,8% da
   variância das features numéricas padronizadas.
+
+### APS2
+
+- Compara Dummy, Ridge e Random Forest por MAE nos mesmos folds do treino.
+- Testa uma mudança isolada no encoder: agrupar categorias com menos de 20 anúncios.
+- A floresta com categorias raras agrupadas obteve MAE de **US$ 65,04** na
+  validação e **US$ 63,08** no teste reservado; a melhora de **US$ 0,09** na
+  validação após agrupar categorias é pequena.
+- Usa SHAP para explicar resultados globais e três previsões individuais.
+
+Os valores observados, os gráficos e a discussão completa estão no [notebook da APS2](notebooks/APS2_Airbnb_Regressao.ipynb) e na [documentação pública](https://djairofilho.github.io/aps1-airbnb-eda/aps2/).
 
 ## Limitações
 

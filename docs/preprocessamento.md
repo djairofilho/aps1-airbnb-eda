@@ -1,4 +1,6 @@
-# Pré-processamento
+# APS1 — pré-processamento
+
+Este é o ponto de partida reproduzido no [notebook da APS2](aps2/notebook.md). Na modelagem, uma cópia não ajustada do pré-processador entra em cada fold da validação cruzada.
 
 ## Separação sem vazamento
 
@@ -25,7 +27,7 @@ Nenhum método `fit` recebe `X_test`.
 | Categoria nova | `handle_unknown="ignore"` | Aceita valores novos |
 | IDs e nomes | Exclusão | Sem sentido quantitativo ou alta cardinalidade |
 | Target extremo | Manutenção | Não há evidência suficiente de erro |
-| Target assimétrico | Avaliar `log1p` | Reduz a influência da cauda |
+| Target assimétrico | Manter em US$ na APS2 | Permite isolar o efeito da mudança no encoder; `log1p` permanece hipótese futura |
 
 ## Features do baseline
 

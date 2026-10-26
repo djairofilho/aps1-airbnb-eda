@@ -1,4 +1,6 @@
-# PCA das variáveis numéricas
+# APS1 — PCA das variáveis numéricas
+
+Esta análise resume a estrutura das variáveis numéricas. A [APS2](aps2/index.md) avalia capacidade preditiva por validação cruzada; o PCA não é usado como preditor.
 
 O PCA cria combinações das variáveis originais. PC1 preserva a maior direção de
 variação e PC2 preserva a maior parte restante, sendo perpendicular a PC1.
