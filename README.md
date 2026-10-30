@@ -1,6 +1,6 @@
 # Projeto de Machine Learning — Airbnb em Nova York
 
-[Documentação pública](https://djairofilho.github.io/aps1-airbnb-eda/) ·
+[Documentação pública](https://djairofilho.github.io/aps-airbnb-eda/) ·
 [APS1: EDA](notebooks/APS1_Airbnb_EDA.ipynb) ·
 [APS2: regressão](notebooks/APS2_Airbnb_Regressao.ipynb) ·
 [Dataset](data/raw/AB_NYC_2019.csv)
@@ -107,7 +107,7 @@ uv export --all-groups `
   validação após agrupar categorias é pequena.
 - Usa SHAP para explicar resultados globais e três previsões individuais.
 
-Os valores observados, os gráficos e a discussão completa estão no [notebook da APS2](notebooks/APS2_Airbnb_Regressao.ipynb) e na [documentação pública](https://djairofilho.github.io/aps1-airbnb-eda/aps2/).
+Os valores observados, os gráficos e a discussão completa estão no [notebook da APS2](notebooks/APS2_Airbnb_Regressao.ipynb) e na [documentação pública](https://djairofilho.github.io/aps-airbnb-eda/aps2/).
 
 ## Limitações
 

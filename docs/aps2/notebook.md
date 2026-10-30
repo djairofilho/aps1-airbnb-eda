@@ -6,4 +6,4 @@ O notebook executado reúne código, tabelas, figuras, decisões e interpretaç�
 
 Também estão disponíveis o [arquivo IPYNB no GitHub][aps2-ipynb], o [notebook da APS1](../notebook.md) e as [instruções de reprodução](../reproducao.md).
 
-[aps2-ipynb]: https://github.com/djairofilho/aps1-airbnb-eda/blob/main/notebooks/APS2_Airbnb_Regressao.ipynb
+[aps2-ipynb]: https://github.com/djairofilho/aps-airbnb-eda/blob/main/notebooks/APS2_Airbnb_Regressao.ipynb

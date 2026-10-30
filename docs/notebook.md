@@ -15,4 +15,4 @@ A etapa seguinte possui um [notebook próprio de modelagem](aps2/notebook.md).
 A versão HTML permite leitura sem kernel. O arquivo IPYNB permanece como fonte
 executável e auditável.
 
-[notebook-github]: https://github.com/djairofilho/aps1-airbnb-eda/blob/main/notebooks/APS1_Airbnb_EDA.ipynb
+[notebook-github]: https://github.com/djairofilho/aps-airbnb-eda/blob/main/notebooks/APS1_Airbnb_EDA.ipynb

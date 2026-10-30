@@ -11,8 +11,8 @@ O repositório fixa Python 3.12 e registra as versões resolvidas em `uv.lock`.
 ## Instalação
 
 ```powershell
-git clone https://github.com/djairofilho/aps1-airbnb-eda.git
-cd aps1-airbnb-eda
+git clone https://github.com/djairofilho/aps-airbnb-eda.git
+cd aps-airbnb-eda
 uv sync --locked
 ```
 

@@ -1,9 +1,9 @@
 site_name: Projeto de Machine Learning — Airbnb NYC
 site_description: EDA e regressão do preço anunciado dos anúncios Airbnb em Nova York em 2019
 site_author: Djairo Dantas da Silva Filho
-site_url: https://djairofilho.github.io/aps1-airbnb-eda/
-repo_url: https://github.com/djairofilho/aps1-airbnb-eda
-repo_name: djairofilho/aps1-airbnb-eda
+site_url: https://djairofilho.github.io/aps-airbnb-eda/
+repo_url: https://github.com/djairofilho/aps-airbnb-eda
+repo_name: djairofilho/aps-airbnb-eda
 
 theme:
   name: material
