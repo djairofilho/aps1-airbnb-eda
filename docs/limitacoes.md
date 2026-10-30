@@ -35,4 +35,4 @@ no snapshot de Nova York em 2019.
 4. Comparar um modelo linear com um conjunto de árvores e um Dummy.
 5. Testar o agrupamento de categorias raras de bairro.
 
-A transformação `log1p` do target continua como hipótese para uma investigação posterior. A APS2 mantém a escala original para comparar de modo isolado a mudança no encoder.
+A transformação `log1p` do target continua como hipótese para uma investigação posterior. A APS2 mantém a escala original e compara a mudança no encoder com nova busca de hiperparâmetros; um diagnóstico adicional fixa os parâmetros para separar essas duas alterações.

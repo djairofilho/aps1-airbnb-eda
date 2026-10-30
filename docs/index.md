@@ -7,7 +7,9 @@ O projeto investiga o **preço anunciado por noite** de imóveis no Airbnb em du
 | Etapa | Data | Pergunta principal | Entregas |
 |---|---|---|---|
 | **APS1 — exploração dos dados** | 14/09/2026 | Como as variáveis se distribuem e se relacionam com o preço? | Auditoria de qualidade, gráficos, decisões de pré-processamento e PCA. |
-| **APS2 — modelagem e avaliação** | 26/10/2026 | Quão bem conseguimos prever o preço anunciado de um anúncio não usado no ajuste? | Três modelos, validação cruzada, mudança no pipeline, avaliação no teste, SHAP e discussão crítica. |
+| **APS2 — modelagem e avaliação** | 30/10/2026 | Quão bem conseguimos prever o preço anunciado de um anúncio não usado no ajuste? | Três modelos, validação cruzada, mudança no pipeline, avaliação no teste, SHAP e discussão crítica. |
+
+Para a APS2, a data segue a [página oficial da disciplina](https://insper.github.io/ML/pt/2026.2/project/); o Colab ainda registra 26/10. Veja a [revisão e o checklist](aps2/revisao.md).
 
 [Explorar a APS1](aps1.md){ .md-button }
 [Ver a APS2](aps2/index.md){ .md-button .md-button--primary }

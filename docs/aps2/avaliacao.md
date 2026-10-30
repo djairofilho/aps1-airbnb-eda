@@ -24,7 +24,7 @@ O resíduo é definido como **preço real menos preço previsto**. Um valor posi
 
 ![Distribuição dos resíduos](../assets/images/aps2/distribuicao-residuos.png)
 
-Os painéis completos mostram erros positivos muito altos: nesses anúncios, o modelo **subestimou** o preço anunciado. As ampliações revelam a massa principal perto de zero e deixam clara a assimetria da cauda. A amostra de 5.000 pontos nos dispersogramas serve apenas à legibilidade; as métricas e o histograma usam todo o teste.
+Os painéis completos mostram erros positivos muito altos: nesses anúncios, o modelo **subestimou** o preço anunciado. As ampliações revelam a massa principal perto de zero e deixam clara a assimetria da cauda. Os dispersogramas, as métricas e o histograma usam todos os **9.777 anúncios do teste**; as ampliações limitam somente a região visível.
 
 ## Erro por segmento
 

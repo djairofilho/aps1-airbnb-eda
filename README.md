@@ -101,7 +101,7 @@ uv export --all-groups `
 ### APS2
 
 - Compara Dummy, Ridge e Random Forest por MAE nos mesmos folds do treino.
-- Testa uma mudança isolada no encoder: agrupar categorias com menos de 20 anúncios.
+- Agrupa categorias com menos de 20 anúncios, refaz a busca e acrescenta um diagnóstico com hiperparâmetros fixos.
 - A floresta com categorias raras agrupadas obteve MAE de **US$ 65,04** na
   validação e **US$ 63,08** no teste reservado; a melhora de **US$ 0,09** na
   validação após agrupar categorias é pequena.

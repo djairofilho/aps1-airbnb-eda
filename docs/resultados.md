@@ -8,7 +8,7 @@ Os resultados abaixo foram obtidos apenas no conjunto de treino. Eles motivam as
 
 O preço possui forte cauda à direita. A mediana de US$ 106 é menor que a média
 de US$ 153,18, mostrando que poucos anúncios caros deslocam a média. A
-A transformação `log1p` ajudou a visualizar a distribuição. Na APS2, o target permanece em dólares para que a mudança isolada no pipeline seja o agrupamento de categorias raras.
+A transformação `log1p` ajudou a visualizar a distribuição. Na APS2, o target permanece em dólares; a comparação principal avalia o agrupamento de categorias raras com nova seleção de hiperparâmetros, e um diagnóstico adicional mantém os parâmetros fixos.
 
 ![Mínimo de noites e disponibilidade anual](assets/images/distribuicoes-numericas.png)
 
