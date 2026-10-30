@@ -1,5 +1,5 @@
 [project]
-name = "aps1-airbnb-eda"
+name = "aps-airbnb-eda"
 version = "0.1.0"
 description = "Exploração e regressão do preço anunciado dos anúncios do Airbnb em Nova York"
 readme = "README.md"

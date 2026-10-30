@@ -153,7 +153,7 @@ jupyterlab-pygments==0.3.0
 jupyterlab-server==2.28.0
     # via jupyterlab
 kagglehub==1.0.2
-    # via aps1-airbnb-eda
+    # via aps-airbnb-eda
 kagglesdk==0.1.37
     # via kagglehub
 kiwisolver==1.5.1
@@ -180,7 +180,7 @@ markupsafe==3.0.3
     #   nbconvert
 matplotlib==3.11.2
     # via
-    #   aps1-airbnb-eda
+    #   aps-airbnb-eda
     #   seaborn
 matplotlib-inline==0.2.2
     # via
@@ -220,7 +220,7 @@ numba==0.68.0 ; (python_full_version < '3.12' and platform_machine != 'x86_64') 
     # via shap
 numpy==2.4.6 ; python_full_version < '3.12'
     # via
-    #   aps1-airbnb-eda
+    #   aps-airbnb-eda
     #   contourpy
     #   matplotlib
     #   numba
@@ -231,7 +231,7 @@ numpy==2.4.6 ; python_full_version < '3.12'
     #   shap
 numpy==2.5.3 ; python_full_version >= '3.12'
     # via
-    #   aps1-airbnb-eda
+    #   aps-airbnb-eda
     #   contourpy
     #   matplotlib
     #   pandas
@@ -257,7 +257,7 @@ paginate==0.5.7
     # via mkdocs-material
 pandas==3.0.5
     # via
-    #   aps1-airbnb-eda
+    #   aps-airbnb-eda
     #   seaborn
     #   shap
 pandocfilters==1.5.1
@@ -358,7 +358,7 @@ rpds-py==2026.6.3
     #   referencing
 scikit-learn==1.9.1
     # via
-    #   aps1-airbnb-eda
+    #   aps-airbnb-eda
     #   shap
 scipy==1.17.1 ; python_full_version < '3.12'
     # via
@@ -369,15 +369,15 @@ scipy==1.18.1 ; python_full_version >= '3.12'
     #   scikit-learn
     #   shap
 seaborn==0.13.2
-    # via aps1-airbnb-eda
+    # via aps-airbnb-eda
 send2trash==2.1.0
     # via jupyter-server
 setuptools==84.2.1 ; python_full_version < '3.12' and platform_machine == 'x86_64' and sys_platform == 'darwin'
     # via numba
 shap==0.51.0 ; python_full_version < '3.12'
-    # via aps1-airbnb-eda
+    # via aps-airbnb-eda
 shap==0.54.1 ; python_full_version >= '3.12'
-    # via aps1-airbnb-eda
+    # via aps-airbnb-eda
 six==1.17.0
     # via
     #   python-dateutil
